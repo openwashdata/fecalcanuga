@@ -1,3 +1,6 @@
 ^fecalcanuga\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^fecalcanuga\.Rcheck$
+^fecalcanuga.*\.tar\.gz$
+^fecalcanuga.*\.tgz$
