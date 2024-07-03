@@ -1,0 +1,59 @@
+# README
+
+## General information
+
+1.  Title of Dataset:  Household Survey + Fecal Sludge Data from Non-Sewered Sanitation Containments in Canada and Uganda
+
+2.  Author Information
+
+**Author A**
+
+- First name:Kelsey
+- Surname:Shaw
+- ORCID iD: 0000-0001-7417-110X
+- Email:kelseyshaw@uvic.ca
+
+
+3.  Date of data collection (single date, range, approximate date):April - June 2023 & January - February 2024
+
+4.  Geographic location of data collection:Southern Vancouver Island and Southern Gulf Islands, BC, Canada & Kampala City, Uganda
+
+5.  Information about funding sources that supported the collection of
+    the data:
+    - NSERC (University of Victoria)
+    - SNSF(Eawag - Swiss Federal Research Institute of Aquatic Science and Technology)
+
+## Sharing / access information
+
+1.  Licenses/restrictions placed on the data:  N/A
+
+Recommended: This work is licensed under the Creative Commons Attribution 4.0 International license (CC-BY-4.0).
+
+2.  Links to publications that cite or use the data: N/A
+
+3.  Links to other publicly accessible locations of the data: N/A
+
+4.  Links/relationships to ancillary data sets: N/A
+
+5.  Was data derived from another source? No
+
+## Methodological information
+
+1.  Description of methods used for collection/generation of data:In development
+
+2.  Methods for processing the data: Excel and R
+
+3.  Instrument- or software-specific information needed to interpret the
+    data: Microsoft packages or R
+
+4.  Standards and calibration information, if appropriate: - In development
+
+5.  Environmental/experimental conditions: N/A
+
+6.  Describe any quality-assurance procedures performed on the data: In development
+
+7.  People involved with sample collection, processing, analysis and/or
+    submission: Kelsey Shaw, Dr. Caetano Dorea, Dr. Linda Strande, Prof Charles Niwagaba
+    Research Interns (Noemie, Eloisa, Alice, Izzy), Davis Majara, Abubaker Batte, Eric Kutosi
+    Lab Techs (Arielle, Sylvia, Aline, Patrick, Karin, Robert, Rita, etc.)
+
