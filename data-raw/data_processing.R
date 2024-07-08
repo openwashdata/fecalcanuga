@@ -28,30 +28,27 @@ phys_chem_parameter_data <- read_excel(here("data-raw", "rawdata_edited.xlsx"), 
 
 
 # Export Data ------------------------------------------------------------------
-# Save data within package data directory
+## Save data within package data directory
 usethis::use_data(household_survey_data, containment_data,
                   ghg_data, phys_chem_parameter_data, overwrite = TRUE)
 
-# Create the directory if it doesn't exist
+## Create the directory if it doesn't exist
 fs::dir_create(here::here("inst", "extdata"))
 
-# Create a new workbook
+## Create a new workbook
 wb <- createWorkbook()
 
-# Add dataframes to separate sheets
+## Add dataframes to separate sheets
 addWorksheet(wb, "Household Survey Data")
 writeData(wb, "Household Survey Data", household_survey_data)
-
 addWorksheet(wb, "Containment Data")
 writeData(wb, "Containment Data", containment_data)
-
 addWorksheet(wb, "GHG Data")
 writeData(wb, "GHG Data", ghg_data)
-
 addWorksheet(wb, "Phys Chem Parameter Data")
 writeData(wb, "Phys Chem Parameter Data", phys_chem_parameter_data)
 
-# Save the workbook to the specified directory
+## Save the workbook to the specified directory
 saveWorkbook(wb, here::here("inst", "extdata", "fecalcanuga.xlsx"),
              overwrite = TRUE)
 
