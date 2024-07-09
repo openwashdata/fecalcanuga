@@ -10,7 +10,7 @@ editor: visual
 
 This data represents 5 months of field work from April - June 2023 (Canada) and January - February (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.
 
-## Load Packages 
+## Load Packages
 
 ```{r}
 library(readxl)
