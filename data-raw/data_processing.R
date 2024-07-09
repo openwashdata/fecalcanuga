@@ -11,7 +11,7 @@ library(here)
 library(readr)
 library(openxlsx)
 library(readxl)
-library (dplyr)
+library(dplyr)
 
 # Read data --------------------------------------------------------------------
 ## Read data from excel sheet into 4 separate data frames
