@@ -113,8 +113,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="project-description" class="level1">
 <h1>Project Description</h1>
 <p>This data represents 5 months of field work from April - June 2023 (Canada) and January - February (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.</p>
-<section id="load-packages" class="level2">
-<h2 class="anchored" data-anchor-id="load-packages">Load Packages</h2>
+<section id="install-load-packages" class="level2">
+<h2 class="anchored" data-anchor-id="install-load-packages">Install &amp; Load Packages</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -193,66 +193,101 @@ The following object is masked from 'package:graphics':
 <section id="import-data" class="level2">
 <h2 class="anchored" data-anchor-id="import-data">Import Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Set working directory</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/cloud/project/inst/extdata"</span>)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">#read in cleaned data</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>household_survey <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">1</span>)</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>containment <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">2</span>)</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>ghg <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">3</span>)</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>phys_chem_parameter <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">4</span>)</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Check first 5 rows</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(household_survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 41
-  sample_id   location_id date                local_area_name establishment_type
-  &lt;chr&gt;       &lt;chr&gt;       &lt;dttm&gt;              &lt;chr&gt;           &lt;chr&gt;             
-1 01-Pender-… 1a          2023-04-06 00:00:00 Pender Island   Household         
-2 02-Pender-… 1b          2023-04-06 00:00:00 Pender Island   Household         
-3 03-Saanich… 2a          2023-04-12 00:00:00 Saanich         Household         
-4 04-Saanich… 2b          2023-04-12 00:00:00 Saanich         Household         
-5 05-SSI-190… 3a          2023-04-19 00:00:00 Salt Spring Is… Household         
-6 06-SSI-190… 3b          2023-04-19 00:00:00 Salt Spring Is… Commercial        
-# ℹ 36 more variables: users &lt;dbl&gt;, last_emptied &lt;dbl&gt;, shared_toilet &lt;chr&gt;,
-#   rent_or_own &lt;chr&gt;, containment &lt;chr&gt;, lining &lt;chr&gt;, lining_material &lt;chr&gt;,
-#   change_in_liquid_level &lt;chr&gt;, baffles &lt;chr&gt;, outflow &lt;chr&gt;,
-#   outflow_location &lt;chr&gt;, toilet_type &lt;chr&gt;, anal_cleansing_material &lt;chr&gt;,
-#   paper &lt;dbl&gt;, water &lt;dbl&gt;, additives &lt;chr&gt;, frequency &lt;chr&gt;,
-#   chemicals &lt;chr&gt;, wastewater_type &lt;chr&gt;, toilet &lt;dbl&gt;, bathing &lt;dbl&gt;,
-#   laundry &lt;dbl&gt;, kitchen &lt;dbl&gt;, water_connection &lt;chr&gt;, where &lt;chr&gt;, …</code></pre>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"kelseyshaw/fecalcanuga"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Using GitHub PAT from the git credential store.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(containment)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 10
-  sample_id location_id date                 area sludge_depth containment_depth
-  &lt;chr&gt;     &lt;chr&gt;       &lt;dttm&gt;              &lt;dbl&gt;        &lt;dbl&gt;             &lt;dbl&gt;
-1 01-Pende… 1a          2023-04-06 00:00:00  1            0.4               1.7 
-2 02-Pende… 1b          2023-04-06 00:00:00  1.64         0.53              2.36
-3 03-Saani… 2a          2023-04-12 00:00:00  1.57         0.89              2.7 
-4 04-Saani… 2b          2023-04-12 00:00:00  0.92         0.71              1.75
-5 05-SSI-1… 3a          2023-04-19 00:00:00  0.96         0.47              1.35
-6 06-SSI-1… 3b          2023-04-19 00:00:00  1.12         0.65              2.01
-# ℹ 4 more variables: containment_volume &lt;dbl&gt;, fs_volume &lt;dbl&gt;,
-#   accumulation_rate &lt;dbl&gt;, scum_depth &lt;dbl&gt;</code></pre>
+<div class="cell-output cell-output-stderr">
+<pre><code>Skipping install of 'fecalcanuga' from a github remote, the SHA1 (290ab3ac) has not changed since last install.
+  Use `force = TRUE` to force installation</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ghg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fecalcanuga)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>household_survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 7
-  sample_id     location_id date                users flux_ch4 flux_co2 flux_n20
-  &lt;chr&gt;         &lt;chr&gt;       &lt;dttm&gt;              &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
-1 01-Pender-06… 1a          2023-04-06 00:00:00     2   2.64        0          0
-2 02-Pender-06… 1b          2023-04-06 00:00:00     3   0.604       0          0
-3 03-Saanich-1… 2a          2023-04-12 00:00:00     2   1.62        0          0
-4 04-Saanich-1… 2b          2023-04-12 00:00:00     3   1.30        0          0
-5 05-SSI-19042… 3a          2023-04-19 00:00:00     2   6.24       49.4        0
-6 06-SSI-19042… 3b          2023-04-19 00:00:00   410   0.0699      0          0</code></pre>
+<pre><code># A tibble: 41 × 41
+   sample_id  location_id date                local_area_name establishment_type
+   &lt;fct&gt;      &lt;fct&gt;       &lt;dttm&gt;              &lt;fct&gt;           &lt;fct&gt;             
+ 1 01-Pender… 1a          2023-04-06 00:00:00 Pender Island   Household         
+ 2 02-Pender… 1b          2023-04-06 00:00:00 Pender Island   Household         
+ 3 03-Saanic… 2a          2023-04-12 00:00:00 Saanich         Household         
+ 4 04-Saanic… 2b          2023-04-12 00:00:00 Saanich         Household         
+ 5 05-SSI-19… 3a          2023-04-19 00:00:00 Salt Spring Is… Household         
+ 6 06-SSI-19… 3b          2023-04-19 00:00:00 Salt Spring Is… Commercial        
+ 7 07-NS-260… 4a          2023-04-26 00:00:00 Saanich         Household         
+ 8 08-NS-260… 4b          2023-04-26 00:00:00 Saanich         Household         
+ 9 09-PL-090… 5a          2023-05-09 00:00:00 Saanich         School            
+10 10-DC-090… 5b          2023-05-09 00:00:00 Saanich         School            
+# ℹ 31 more rows
+# ℹ 36 more variables: users &lt;dbl&gt;, last_emptied &lt;dbl&gt;, shared_toilet &lt;fct&gt;,
+#   rent_or_own &lt;fct&gt;, containment &lt;fct&gt;, lining &lt;fct&gt;, lining_material &lt;fct&gt;,
+#   change_in_liquid_level &lt;fct&gt;, baffles &lt;fct&gt;, outflow &lt;fct&gt;,
+#   outflow_location &lt;fct&gt;, toilet_type &lt;fct&gt;, anal_cleansing_material &lt;fct&gt;,
+#   paper &lt;dbl&gt;, water &lt;dbl&gt;, additives &lt;fct&gt;, frequency &lt;fct&gt;,
+#   chemicals &lt;fct&gt;, wastewater_type &lt;fct&gt;, toilet &lt;dbl&gt;, bathing &lt;dbl&gt;, …</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(phys_chem_parameter)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>ghg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 41 × 7
+   sample_id    location_id date                users flux_ch4 flux_co2 flux_n20
+   &lt;fct&gt;        &lt;fct&gt;       &lt;dttm&gt;              &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+ 1 01-Pender-0… 1a          2023-04-06 00:00:00     2   2.64        0          0
+ 2 02-Pender-0… 1b          2023-04-06 00:00:00     3   0.604       0          0
+ 3 03-Saanich-… 2a          2023-04-12 00:00:00     2   1.62        0          0
+ 4 04-Saanich-… 2b          2023-04-12 00:00:00     3   1.30        0          0
+ 5 05-SSI-1904… 3a          2023-04-19 00:00:00     2   6.24       49.4        0
+ 6 06-SSI-1904… 3b          2023-04-19 00:00:00   410   0.0699      0          0
+ 7 07-NS-26042… 4a          2023-04-26 00:00:00     2   1.75        0          0
+ 8 08-NS-26042… 4b          2023-04-26 00:00:00     2   6.97        0          0
+ 9 09-PL-09052… 5a          2023-05-09 00:00:00   304   0           0          0
+10 10-DC-09052… 5b          2023-05-09 00:00:00   368   0.0632      0          0
+# ℹ 31 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>containment</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 41 × 10
+   sample_id           location_id date                 area sludge_depth
+   &lt;fct&gt;               &lt;fct&gt;       &lt;dttm&gt;              &lt;dbl&gt;        &lt;dbl&gt;
+ 1 01-Pender-06042023  1a          2023-04-06 00:00:00  1            0.4 
+ 2 02-Pender-06042023  1b          2023-04-06 00:00:00  1.64         0.53
+ 3 03-Saanich-12042023 2a          2023-04-12 00:00:00  1.57         0.89
+ 4 04-Saanich-12042023 2b          2023-04-12 00:00:00  0.92         0.71
+ 5 05-SSI-19042023     3a          2023-04-19 00:00:00  0.96         0.47
+ 6 06-SSI-19042023     3b          2023-04-19 00:00:00  1.12         0.65
+ 7 07-NS-2604223       4a          2023-04-26 00:00:00  1.46         0.28
+ 8 08-NS-26042023      4b          2023-04-26 00:00:00  2.84         0.86
+ 9 09-PL-09052023      5a          2023-05-09 00:00:00  1.44         0.72
+10 10-DC-09052023      5b          2023-05-09 00:00:00  1.91         0.98
+# ℹ 31 more rows
+# ℹ 5 more variables: containment_depth &lt;dbl&gt;, containment_volume &lt;dbl&gt;,
+#   fs_volume &lt;dbl&gt;, accumulation_rate &lt;dbl&gt;, scum_depth &lt;dbl&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>phys_chem_parameter</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 119 × 29
+   sample_id   location_id date                depth_id sludge_depth temperature
+   &lt;fct&gt;       &lt;fct&gt;       &lt;dttm&gt;              &lt;fct&gt;           &lt;dbl&gt;       &lt;dbl&gt;
+ 1 01-Pender-… 1a          2023-04-06 00:00:00 T                0          11.5 
+ 2 01-Pender-… 1a          2023-04-06 00:00:00 M                0.65       11.5 
+ 3 01-Pender-… 1a          2023-04-06 00:00:00 B                1.31       10.7 
+ 4 02-Pender-… 1b          2023-04-06 00:00:00 T                0           9.54
+ 5 02-Pender-… 1b          2023-04-06 00:00:00 M                0.9         9.39
+ 6 02-Pender-… 1b          2023-04-06 00:00:00 B                1.82        9.40
+ 7 03-Saanich… 2a          2023-04-12 00:00:00 T                0          10.8 
+ 8 03-Saanich… 2a          2023-04-12 00:00:00 M                0.9        10.5 
+ 9 03-Saanich… 2a          2023-04-12 00:00:00 B                1.85       10.4 
+10 04-Saanich… 2b          2023-04-12 00:00:00 T                0          14.0 
+# ℹ 109 more rows
+# ℹ 23 more variables: DO &lt;dbl&gt;, pH &lt;dbl&gt;, ORP &lt;dbl&gt;, EC &lt;dbl&gt;, COD &lt;dbl&gt;,
+#   soluble_COD &lt;dbl&gt;, sulphide &lt;dbl&gt;, total_nitrogen &lt;dbl&gt;, nitrite &lt;dbl&gt;,
+#   nitrate &lt;dbl&gt;, ammonia &lt;dbl&gt;, TKN &lt;dbl&gt;, ortho_phosphorous &lt;dbl&gt;,
+#   total_phosphorous &lt;dbl&gt;, BOD &lt;dbl&gt;, TOC &lt;dbl&gt;, ts &lt;dbl&gt;, vs &lt;dbl&gt;,
+#   vs_percent &lt;dbl&gt;, sand_content &lt;dbl&gt;, tss &lt;dbl&gt;, vss &lt;dbl&gt;, vss_tss &lt;dbl&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(phys_chem_parameter)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 29
   sample_id    location_id date                depth_id sludge_depth temperature
-  &lt;chr&gt;        &lt;chr&gt;       &lt;dttm&gt;              &lt;chr&gt;           &lt;dbl&gt;       &lt;dbl&gt;
+  &lt;fct&gt;        &lt;fct&gt;       &lt;dttm&gt;              &lt;fct&gt;           &lt;dbl&gt;       &lt;dbl&gt;
 1 01-Pender-0… 1a          2023-04-06 00:00:00 T                0          11.5 
 2 01-Pender-0… 1a          2023-04-06 00:00:00 M                0.65       11.5 
 3 01-Pender-0… 1a          2023-04-06 00:00:00 B                1.31       10.7 
