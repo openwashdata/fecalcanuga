@@ -1,0 +1,50 @@
+---
+title: "Fecal Sludge Data Analysis"
+date: "2024-04-08"
+author: "Kelsey Shaw"
+format: html
+editor: visual
+---
+
+# Project Description
+
+This data represents 5 months of field work from April - June 2023 (Canada) and January - February (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.
+
+## Load Packages 
+
+```{r}
+library(readxl)
+library(here)
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+library(tidyr)
+library(knitr)
+library(gt)
+library(gtsummary)
+library(DT)
+library(reshape2)
+library(GGally)
+library(plotly)
+
+```
+
+## Import Data
+
+```{r}
+#Set working directory
+setwd("/cloud/project/inst/extdata")
+
+#read in cleaned data
+household_survey_data <- read_excel(("fecalcanuga.xlsx"), sheet = 1)
+containment_data <- read_excel(("fecalcanuga.xlsx"), sheet = 2)
+ghg_data <- read_excel(("fecalcanuga.xlsx"), sheet = 3)
+phys_chem_parameter_data <- read_excel(("fecalcanuga.xlsx"), sheet = 4)
+
+
+# Check first 5 rows
+head(household_survey_data)
+head(containment_data)
+head(ghg_data)
+head(phys_chem_parameter_data)
+```
