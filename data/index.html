@@ -197,14 +197,13 @@ The following object is masked from 'package:graphics':
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/cloud/project/inst/extdata"</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">#read in cleaned data</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>household_survey_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">1</span>)</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>containment_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">2</span>)</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>ghg_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">3</span>)</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>phys_chem_parameter_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">4</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>household_survey <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">1</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>containment <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">2</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>ghg <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">3</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>phys_chem_parameter <span class="ot">&lt;-</span> <span class="fu">read_excel</span>((<span class="st">"fecalcanuga.xlsx"</span>), <span class="at">sheet =</span> <span class="dv">4</span>)</span>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Check first 5 rows</span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(household_survey_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Check first 5 rows</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(household_survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 41
   sample_id   location_id date                local_area_name establishment_type
@@ -223,7 +222,7 @@ The following object is masked from 'package:graphics':
 #   chemicals &lt;chr&gt;, wastewater_type &lt;chr&gt;, toilet &lt;dbl&gt;, bathing &lt;dbl&gt;,
 #   laundry &lt;dbl&gt;, kitchen &lt;dbl&gt;, water_connection &lt;chr&gt;, where &lt;chr&gt;, …</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(containment_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(containment)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 10
   sample_id location_id date                 area sludge_depth containment_depth
@@ -237,7 +236,7 @@ The following object is masked from 'package:graphics':
 # ℹ 4 more variables: containment_volume &lt;dbl&gt;, fs_volume &lt;dbl&gt;,
 #   accumulation_rate &lt;dbl&gt;, scum_depth &lt;dbl&gt;</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ghg_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ghg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 7
   sample_id     location_id date                users flux_ch4 flux_co2 flux_n20
@@ -249,7 +248,7 @@ The following object is masked from 'package:graphics':
 5 05-SSI-19042… 3a          2023-04-19 00:00:00     2   6.24       49.4        0
 6 06-SSI-19042… 3b          2023-04-19 00:00:00   410   0.0699      0          0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(phys_chem_parameter_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(phys_chem_parameter)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 29
   sample_id    location_id date                depth_id sludge_depth temperature

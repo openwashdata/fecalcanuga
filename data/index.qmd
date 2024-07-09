@@ -32,20 +32,18 @@ library(plotly)
 ## Import Data
 
 ```{r}
-head(containment)
 #Set working directory
-#setwd("/cloud/project/inst/extdata")
+setwd("/cloud/project/inst/extdata")
 
 #read in cleaned data
-#household_survey_data <- read_excel(("fecalcanuga.xlsx"), sheet = 1)
-#containment_data <- read_excel(("fecalcanuga.xlsx"), sheet = 2)
-#ghg_data <- read_excel(("fecalcanuga.xlsx"), sheet = 3)
-#phys_chem_parameter_data <- read_excel(("fecalcanuga.xlsx"), sheet = 4)
-
+household_survey <- read_excel(("fecalcanuga.xlsx"), sheet = 1)
+containment <- read_excel(("fecalcanuga.xlsx"), sheet = 2)
+ghg <- read_excel(("fecalcanuga.xlsx"), sheet = 3)
+phys_chem_parameter <- read_excel(("fecalcanuga.xlsx"), sheet = 4)
 
 # Check first 5 rows
-#head(household_survey_data)
-#head(containment_data)
-#head(ghg_data)
-#head(phys_chem_parameter_data)
+head(household_survey)
+head(containment)
+head(ghg)
+head(phys_chem_parameter)
 ```
