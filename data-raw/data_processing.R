@@ -17,13 +17,13 @@ library (dplyr)
 ## Read data from excel sheet into 4 separate data frames
 ##(household_survey_data, containment_data, ghg_data,phys_chem_parameter_data)
 
-household_survey_data <- read_excel(here("data-raw", "rawdata_edited.xlsx"),
+household_survey <- read_excel(here("data-raw", "rawdata_edited.xlsx"),
                                     sheet = 1)
-containment_data <- read_excel(here("data-raw", "rawdata_edited.xlsx"),
+containment <- read_excel(here("data-raw", "rawdata_edited.xlsx"),
                                sheet = 2)
-ghg_data <- read_excel(here("data-raw", "rawdata_edited.xlsx"),
+ghg <- read_excel(here("data-raw", "rawdata_edited.xlsx"),
                        sheet = 3)
-phys_chem_parameter_data <- read_excel(here("data-raw", "rawdata_edited.xlsx"),
+phys_chem_parameter <- read_excel(here("data-raw", "rawdata_edited.xlsx"),
                                        sheet = 4)
 
 
@@ -31,31 +31,33 @@ phys_chem_parameter_data <- read_excel(here("data-raw", "rawdata_edited.xlsx"),
 ## Clean the raw data into a tidy format here
 ### Change data types
 # Get the class (data type) of each column
-sapply(containment_data, class)
-sapply(ghg_data, class)
-sapply(household_survey_data, class)
-sapply(phys_chem_parameter_data, class)
+sapply(containment, class)
+sapply(ghg, class)
+sapply(household_survey, class)
+sapply(phys_chem_parameter, class)
 
 # Convert all character columns to factors, and fix colums that should be
 ##read in as numeric
-containment_data <- containment_data %>% mutate_if(is.character, as.factor)
-ghg_data <- ghg_data %>% mutate_if(is.character, as.factor)
-household_survey_data <- household_survey_data %>% mutate_if(is.character,
+containment <- containment %>% mutate_if(is.character, as.factor)
+ghg <- ghg %>% mutate_if(is.character, as.factor)
+household_survey <- household_survey %>% mutate_if(is.character,
                                                              as.factor)
-phys_chem_parameter_data$TOC <- as.numeric(phys_chem_parameter_data$TOC)
-phys_chem_parameter_data <- phys_chem_parameter_data %>% mutate_if(is.character,
+phys_chem_parameter$TOC <- as.numeric(phys_chem_parameter$TOC)
+phys_chem_parameter <- phys_chem_parameter %>% mutate_if(is.character,
                                                                    as.factor)
 
 # View the structure of the dataframe to verify changes
-str(containment_data)
-str(ghg_data)
-str(household_survey_data)
-str(phys_chem_parameter_data)
-
-### Missing Values
+str(containment)
+str(ghg)
+str(household_survey)
+str(phys_chem_parameter)
 
 # Export Data ------------------------------------------------------------------
 ## Save data within package data directory
+use_data(household_survey, overwrite = TRUE)
+use_data(containment, overwrite = TRUE)
+use_data(ghg, overwrite = TRUE)
+use_data(phys_chem_parameter, overwrite = TRUE)
 usethis::use_data(household_survey_data, containment_data,
                   ghg_data, phys_chem_parameter_data, overwrite = TRUE)
 
