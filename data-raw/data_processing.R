@@ -58,8 +58,6 @@ use_data(household_survey, overwrite = TRUE)
 use_data(containment, overwrite = TRUE)
 use_data(ghg, overwrite = TRUE)
 use_data(phys_chem_parameter, overwrite = TRUE)
-usethis::use_data(household_survey_data, containment_data,
-                  ghg_data, phys_chem_parameter_data, overwrite = TRUE)
 
 ## Create the directory if it doesn't exist
 fs::dir_create(here::here("inst", "extdata"))
@@ -69,13 +67,13 @@ wb <- createWorkbook()
 
 ## Add dataframes to separate sheets
 addWorksheet(wb, "Household Survey Data")
-writeData(wb, "Household Survey Data", household_survey_data)
+writeData(wb, "Household Survey Data", household_survey)
 addWorksheet(wb, "Containment Data")
-writeData(wb, "Containment Data", containment_data)
+writeData(wb, "Containment Data", containment)
 addWorksheet(wb, "GHG Data")
-writeData(wb, "GHG Data", ghg_data)
+writeData(wb, "GHG Data", ghg)
 addWorksheet(wb, "Phys Chem Parameter Data")
-writeData(wb, "Phys Chem Parameter Data", phys_chem_parameter_data)
+writeData(wb, "Phys Chem Parameter Data", phys_chem_parameter)
 
 ## Save the workbook to the specified directory
 saveWorkbook(wb, here::here("inst", "extdata", "fecalcanuga.xlsx"),
