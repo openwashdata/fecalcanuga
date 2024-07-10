@@ -24,5 +24,5 @@ Language: en-GB
 LazyData: true
 Config/Needs/website: rmarkdown
 Date: 2024-07-03
-URL: https://github.com/openwashdata/fecalcanuga
-BugReports: https://github.com/openwashdata/fecalcanuga/issues
+URL: https://github.com/kelseyshaw/fecalcanuga
+BugReports: https://github.com/kelseyshaw/fecalcanuga/issues
