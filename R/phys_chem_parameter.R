@@ -1,0 +1,37 @@
+#' phys_chem_parameter: Title goes here
+#' 
+#' Description of the data goes here...
+#' 
+#' @format A tibble with 119 rows and 29 variables
+#' \describe{
+#'   \item{sample_id}{unique identifier for each sampling location in the format ##-Location-ddmmyyyy}
+#'   \item{location_id}{unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day}
+#'   \item{date}{date of sampling }
+#'   \item{depth_id}{unique identifier for each sample indicating the location in the containment (T = top, M = middle, B = bottom)}
+#'   \item{sludge_depth}{depth in meters, of where from the top of the sludge the sample was taken}
+#'   \item{temperature}{Temperature of the sludge at the insitu sampling location (in degrees Celsius)}
+#'   \item{DO}{dissolved oxygen concentration in mg/L at the insitu sampling location }
+#'   \item{pH}{pH value at the insitu sampling location }
+#'   \item{ORP}{oxidation reduction potential, measured in millivolts, at the insitu sampling locations}
+#'   \item{EC}{electrical conductivity, measured in microSiemens, at the insitu sampling locations }
+#'   \item{COD}{Chemical oxygen demand, mg/L}
+#'   \item{soluble_COD}{Soluble chemical oxygen demand, mg/L}
+#'   \item{sulphide}{Sulphide, mg/L}
+#'   \item{total_nitrogen}{Total Nitrogen, mg/L}
+#'   \item{nitrite}{Nitrite, mg/L}
+#'   \item{nitrate}{Nitrate, mg/L}
+#'   \item{ammonia}{Ammonia, mg/L}
+#'   \item{TKN}{Total Kjeldahl Nitrogen, mg/L}
+#'   \item{ortho_phosphorous}{Ortho Phosphorous, mg/L}
+#'   \item{total_phosphorous}{Total Phosphorous, mg/L}
+#'   \item{BOD}{Biochemical oxygen demand, mg/L}
+#'   \item{TOC}{Total organic carbon, mg/L}
+#'   \item{ts}{Total solids, g/L}
+#'   \item{vs}{Volatile Solids, g/L}
+#'   \item{vs_percent}{Volatile Solids, % total solids}
+#'   \item{sand_content}{Sand content, g/L}
+#'   \item{tss}{Total suspended solids, g/L}
+#'   \item{vss}{Volatile suspended solids, g/L}
+#'   \item{vss_tss}{VSS/TSS (ratio)}
+#' }
+"phys_chem_parameter"
