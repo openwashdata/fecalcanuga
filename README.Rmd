@@ -1,0 +1,197 @@
+---
+output: github_document
+always_allow_html: true
+editor_options: 
+  markdown: 
+    wrap: 72
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  message = FALSE,
+  warning = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
+)
+```
+
+# fecalcanuga
+
+<!-- badges: start -->
+
+[![License: CC BY
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+<!-- badges: end -->
+
+The goal of `fecalcanuga` is to ...
+
+## Installation
+
+You can install the development version of fecalcanuga from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("kelseyshaw/fecalcanuga")
+```
+
+```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+extdata_path <- "https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/"
+
+read_csv("data-raw/dictionary.csv") |> 
+  distinct(file_name) |> 
+  dplyr::mutate(file_name = str_remove(file_name, ".rda")) |> 
+  dplyr::rename(dataset = file_name) |> 
+  mutate(
+    CSV = paste0("[Download CSV](", extdata_path, dataset, ".csv)"),
+    XLSX = paste0("[Download XLSX](", extdata_path, dataset, ".xlsx)")
+  ) |> 
+  knitr::kable()
+
+```
+
+## Data
+
+The package provides access to ...
+
+```{r}
+library(fecalcanuga)
+```
+
+### containment
+
+The dataset `containment` contains data about ...
+It has `r nrow(containment)` observations and `r ncol(containment)` variables
+
+```{r}
+containment |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "containment.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+### ghg
+
+The dataset `ghg` contains data about ...
+It has `r nrow(ghg)` observations and `r ncol(ghg)` variables
+
+```{r}
+ghg |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "ghg.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+### household_survey
+
+The dataset `household_survey` contains data about ...
+It has `r nrow(household_survey)` observations and `r ncol(household_survey)` variables
+
+```{r}
+household_survey |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "household_survey.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+### phys_chem_parameter
+
+The dataset `phys_chem_parameter` contains data about ...
+It has `r nrow(phys_chem_parameter)` observations and `r ncol(phys_chem_parameter)` variables
+
+```{r}
+phys_chem_parameter |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "phys_chem_parameter.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+
+## Example
+
+```{r}
+library(fecalcanuga)
+
+# Provide some example code here
+```
+
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/fecalcanuga/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+```{r}
+citation("fecalcanuga")
+```
