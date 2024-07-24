@@ -10,7 +10,13 @@
 
 <!-- badges: end -->
 
-The goal of `fecalcanuga` is to …
+The goal of `fecalcanuga` is to provide data representing 5 months of
+field work from April - June 2023 (Canada) and January - February
+(Uganda) collecting household and commercial wastewater containment data
+and characterizing physical, chemical and greenhouse gas data for 22
+non-sewered sanitation sites on southern Vancouver island and the
+southern gulf islands in British Columbia, Canada and 19 sites in
+Kampala, Uganda.
 
 ## Installation
 
@@ -45,7 +51,8 @@ file from the table below.
 
 ## Data
 
-The package provides access to …
+The package provides access to 4 datasets: `containment`, `ghg`,
+`household_survey`, and `phys_chem_parameter`.
 
 ``` r
 library(fecalcanuga)
@@ -53,8 +60,10 @@ library(fecalcanuga)
 
 ### containment
 
-The dataset `containment` contains data about … It has 41 observations
-and 10 variables
+The dataset `containment` contains data about the technical data
+(containment size, volume, fecal sludge depth, etc.) for each
+non-sewered sanitation system containment that was sampled as a part of
+this field work. It has 41 observations and 10 variables
 
 ``` r
 containment |> 
@@ -63,7 +72,7 @@ containment |>
   gt::as_raw_html()
 ```
 
-<div id="grfcyeoskk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="xociofguwt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -200,7 +209,7 @@ containment_depth
 numeric
 </td>
 <td style="text-align:left;">
-depth, in meters, from the top of the containment to the bottom of the
+depth in meters, from the top of the containment to the bottom of the
 containment
 </td>
 </tr>
@@ -256,8 +265,10 @@ the depth of the top scum layer in centimeters
 
 ### ghg
 
-The dataset `ghg` contains data about … It has 41 observations and 7
-variables
+The dataset `ghg` contains data about the calculated mass flux rates
+from the measured point-source in situ GHG measurments and the observed
+person equivalents for each containment for the three key greenhouse
+gases (CH4, CO2 and N2O). It has 41 observations and 7 variables
 
 ``` r
 ghg |> 
@@ -266,7 +277,7 @@ ghg |>
   gt::as_raw_html()
 ```
 
-<div id="ysuocnbxkf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="kyuxqngohy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -411,8 +422,12 @@ nitrious oxide flux in gram/capita-day - based on number of users
 
 ### household_survey
 
-The dataset `household_survey` contains data about … It has 41
-observations and 41 variables
+The dataset `household_survey` contains data about the collected
+household / institutional survey data for each location where a
+non-sewered sanitation containmenet was sampled. This includes
+demographic infromation, operational and maintenance information and
+some technical and environmental parameters. It has 41 observations and
+41 variables
 
 ``` r
 household_survey |> 
@@ -421,7 +436,7 @@ household_survey |>
   gt::as_raw_html()
 ```
 
-<div id="zsfaaxtrre" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="gtiaswbljv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -1095,8 +1110,12 @@ Any additional important notings / observations
 
 ### phys_chem_parameter
 
-The dataset `phys_chem_parameter` contains data about … It has 119
-observations and 29 variables
+The dataset `phys_chem_parameter` contains data about the measured in
+situ and analyzed in laboratory physical, chemical and biological
+parameters pertaining to each containment sampled as well as at
+different veritcal locations in each containment (i.e., Top of
+containment, middle and bottom). It has 119 observations and 29
+variables
 
 ``` r
 phys_chem_parameter |> 
@@ -1105,7 +1124,7 @@ phys_chem_parameter |>
   gt::as_raw_html()
 ```
 
-<div id="rmkedvqfcj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="fkcrwvusfk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">

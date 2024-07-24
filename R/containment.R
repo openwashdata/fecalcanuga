@@ -1,7 +1,7 @@
-#' containment: Title goes here
-#' 
-#' Description of the data goes here...
-#' 
+#' containment: Technical Data for each Non-Sewered Sanitation Containment
+#'
+#' This data set contains the technical data (containment size, volume, fecal sludge depth, etc.) for each non-sewered sanitation system containment that was sampled as a part of this field work.
+#'
 #' @format A tibble with 41 rows and 10 variables
 #' \describe{
 #'   \item{sample_id}{unique identifier for each sampling location in the format ##-Location-ddmmyyyy}

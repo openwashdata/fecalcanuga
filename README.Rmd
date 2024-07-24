@@ -31,7 +31,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-The goal of `fecalcanuga` is to ...
+The goal of `fecalcanuga` is to provide data representing 5 months of field work from April - June 2023 (Canada) and January - February (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.
 
 ## Installation
 
@@ -75,7 +75,7 @@ read_csv("data-raw/dictionary.csv") |>
 
 ## Data
 
-The package provides access to ...
+The package provides access to 4 datasets: `containment`, `ghg`, `household_survey`, and `phys_chem_parameter`.
 
 ```{r}
 library(fecalcanuga)
@@ -83,8 +83,7 @@ library(fecalcanuga)
 
 ### containment
 
-The dataset `containment` contains data about ...
-It has `r nrow(containment)` observations and `r ncol(containment)` variables
+The dataset `containment` contains data about the technical data (containment size, volume, fecal sludge depth, etc.) for each non-sewered sanitation system containment that was sampled as a part of this field work. It has `r nrow(containment)` observations and `r ncol(containment)` variables
 
 ```{r}
 containment |> 
@@ -106,7 +105,7 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 ### ghg
 
-The dataset `ghg` contains data about ...
+The dataset `ghg` contains data about the calculated mass flux rates from the measured point-source in situ GHG measurments and the observed person equivalents for each containment for the three key greenhouse gases (CH4, CO2 and N2O).
 It has `r nrow(ghg)` observations and `r ncol(ghg)` variables
 
 ```{r}
@@ -129,7 +128,7 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 ### household_survey
 
-The dataset `household_survey` contains data about ...
+The dataset `household_survey` contains data about the collected household / institutional survey data for each location where a non-sewered sanitation containmenet was sampled. This includes demographic infromation, operational and maintenance information and some technical and environmental parameters.
 It has `r nrow(household_survey)` observations and `r ncol(household_survey)` variables
 
 ```{r}
@@ -152,7 +151,7 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 ### phys_chem_parameter
 
-The dataset `phys_chem_parameter` contains data about ...
+The dataset `phys_chem_parameter` contains data about the measured in situ and analyzed in laboratory physical, chemical and biological parameters pertaining to each containment sampled as well as at different veritcal locations in each containment (i.e., Top of containment, middle and bottom).
 It has `r nrow(phys_chem_parameter)` observations and `r ncol(phys_chem_parameter)` variables
 
 ```{r}

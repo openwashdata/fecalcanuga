@@ -1,7 +1,7 @@
-#' phys_chem_parameter: Title goes here
-#' 
-#' Description of the data goes here...
-#' 
+#' phys_chem_parameter: Physio-Chemical Parameter Data for each Non-sewered Sanitation Containment
+#'
+#' This data set contains the measured in situ and analyzed in laboratory physical, chemical and biological parameters pertaining to each containment sampled as well as at different veritcal locations in each containment (i.e., Top of containment, middle and bottom).
+#'
 #' @format A tibble with 119 rows and 29 variables
 #' \describe{
 #'   \item{sample_id}{unique identifier for each sampling location in the format ##-Location-ddmmyyyy}

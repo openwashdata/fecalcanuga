@@ -1,7 +1,7 @@
-#' household_survey: Title goes here
-#' 
-#' Description of the data goes here...
-#' 
+#' household_survey: Demographic, Environmental and Technical Household / Institutional Data for each Non-Sewered Sanitation Containment
+#'
+#' This data set contains the collected household / institutional survey data for each location where a non-sewered sanitation containmenet was sampled. This includes demographic infromation, operational and maintenance information and some technical and environmental parameters.
+#'
 #' @format A tibble with 41 rows and 41 variables
 #' \describe{
 #'   \item{sample_id}{unique identifier for each sampling location in the format ##-Location-ddmmyyyy}
