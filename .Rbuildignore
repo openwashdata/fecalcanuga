@@ -5,3 +5,8 @@
 ^fecalcanuga\.Rcheck$
 ^fecalcanuga.*\.tar\.gz$
 ^fecalcanuga.*\.tgz$
+^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^CITATION\.cff$

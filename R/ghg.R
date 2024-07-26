@@ -1,7 +1,7 @@
-#' ghg: Title goes here
-#' 
-#' Description of the data goes here...
-#' 
+#' ghg: Greenhouse Gas Mass Flux Rates for each Non-Sewered Sanitation Containment
+#'
+#' This data set contains the calculated mass flux rates from the measured point-source in situ GHG measurments and the observed person equivalents for each containment for the three key greenhouse gases (CH4, CO2 and N2O).
+#'
 #' @format A tibble with 41 rows and 7 variables
 #' \describe{
 #'   \item{sample_id}{unique identifier for each sampling location in the format ##-Location-ddmmyyyy}
