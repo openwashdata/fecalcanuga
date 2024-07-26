@@ -176,6 +176,7 @@ readr::read_csv("data-raw/dictionary.csv") |>
 ## Example
 
 ```{r}
+# Plot of Volatile Suspended Solids (VSS) versus Chemical Oxygen Demand (COD) for all samples. This plot demonstrates how changes in organic loads (COD) can influence biomass (VSS)
 library(fecalcanuga)
 library(ggplot2)
 # Filter out rows with NA values in COD or vss
