@@ -6,12 +6,12 @@
 #' \describe{
 #'   \item{sample_id}{unique identifier for each sampling location in the format ##-Location-ddmmyyyy}
 #'   \item{location_id}{unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day}
-#'   \item{date}{date of sampling }
+#'   \item{date}{date of sampling}
 #'   \item{depth_id}{unique identifier for each sample indicating the location in the containment (T = top, M = middle, B = bottom)}
 #'   \item{sludge_depth}{depth in meters, of where from the top of the sludge the sample was taken}
 #'   \item{temperature}{Temperature of the sludge at the insitu sampling location (in degrees Celsius)}
-#'   \item{DO}{dissolved oxygen concentration in mg/L at the insitu sampling location }
-#'   \item{pH}{pH value at the insitu sampling location }
+#'   \item{DO}{dissolved oxygen concentration in mg/L at the insitu sampling location}
+#'   \item{pH}{pH value at the insitu sampling location}
 #'   \item{ORP}{oxidation reduction potential, measured in millivolts, at the insitu sampling locations}
 #'   \item{EC}{electrical conductivity, measured in microSiemens, at the insitu sampling locations }
 #'   \item{COD}{Chemical oxygen demand, mg/L}

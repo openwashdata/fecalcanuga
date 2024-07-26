@@ -5,15 +5,15 @@
 \alias{household_survey}
 \title{household_survey: Demographic, Environmental and Technical Household / Institutional Data for each Non-Sewered Sanitation Containment}
 \format{
-A tibble with 41 rows and 41 variables
+A tibble with 41 rows and 39 variables
 \describe{
 \item{sample_id}{unique identifier for each sampling location in the format ##-Location-ddmmyyyy}
 \item{location_id}{unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day}
-\item{date}{date of sampling }
-\item{local_area_name}{community / area name that locals commonly use where samples were taken }
+\item{date}{date of sampling}
+\item{local_area_name}{community / area name that locals commonly use where samples were taken}
 \item{establishment_type}{type of establishment where sampling occurred (household, commercial, school, office building, other)}
 \item{users}{average number of users for the sanitation system that was sampled}
-\item{last_emptied}{in years how long ago from sampling date the containment was last emptied }
+\item{last_emptied}{in years how long ago from sampling date the containment was last emptied}
 \item{shared_toilet}{Is the toilet(s) connected to the sanitation containment shared or not (Yes/No)}
 \item{rent_or_own}{Is the establishment where the containment is rented or owned by the head of household?}
 \item{containment}{The type of containment (septic tank, pit latrine, treatment plant unit, etc.)}
@@ -36,18 +36,16 @@ A tibble with 41 rows and 41 variables
 \item{laundry}{Does the containment collect this type of wastewater (Yes = 1 | No = 0)}
 \item{kitchen}{Does the containment collect this type of wastewater (Yes = 1 | No = 0)}
 \item{water_connection}{What type of water connection does the establishment where sampling is occurring have (tap inside building, standpipe, other)?}
-\item{where}{Does the establishment have this type of water connection (Yes = 1 | No = 0)}
 \item{tap_inside_building}{Does the establishment have this type of water connection (Yes = 1 | No = 0)}
 \item{standpipe}{Does the establishment have this type of water connection (Yes = 1 | No = 0)}
 \item{containment_age}{What is the age (in years) of the containment system?}
 \item{containment_constructed}{Who constructed the containment system (Technician, professional engineering, myself, don't know)?}
 \item{containment_volume}{What (in m^3) is the total volume of the containment?}
 \item{fully_emptied}{When the system was last emptied was it emptied fully? (Y/N/I don't know)}
-\item{emptying_interval}{What is the average / typical emptying interval (in years) of the containment? }
+\item{emptying_interval}{What is the average / typical emptying interval (in years) of the containment?}
 \item{rainy_season}{Is it currently the rainy season? (Y/N)}
 \item{solid_waste}{Does the containment contain solid waste (i.e., garbage) (Y/N)}
 \item{type}{If there is solid waste, what type is it? }
-\item{notes}{Any additional important notings / observations }
 }
 }
 \usage{
