@@ -38,10 +38,16 @@ sapply(phys_chem_parameter, class)
 
 # Convert all character columns to factors, and fix colums that should be
 ##read in as numeric
-containment <- containment %>% mutate_if(is.character, as.factor)
-ghg <- ghg %>% mutate_if(is.character, as.factor)
-household_survey <- household_survey %>% mutate_if(is.character,
-                                                             as.factor)
+household_survey <- household_survey %>%
+  mutate(across(c(shared_toilet, change_in_liquid_level,
+                  baffles, outflow, additives, fully_emptied,
+                  rainy_season, solid_waste, water_connection),
+                ~ case_match(., "Yes" ~ TRUE, "No" ~ FALSE, .default = NA))) |>
+  mutate_if(is.character, as.factor) |>
+  mutate(across(c(sample_id, location_id), as.character)) |>
+  mutate(across(c(paper, water, toilet,
+                  bathing, laundry, kitchen), as.logical))
+
 phys_chem_parameter$TOC <- as.numeric(phys_chem_parameter$TOC)
 phys_chem_parameter <- phys_chem_parameter %>% mutate_if(is.character,
                                                                    as.factor)
