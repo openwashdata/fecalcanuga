@@ -1,6 +1,6 @@
 directory,file_name,variable_name,variable_type,description
-data,containment.rda,sample_id,factor,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
-data,containment.rda,location_id,factor,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
+data,containment.rda,sample_id,character,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
+data,containment.rda,location_id,character,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
 data,containment.rda,date,"c(""POSIXct"", ""POSIXt"")",date of sampling
 data,containment.rda,area,numeric,surface area of liquid surface in containment m^2
 data,containment.rda,sludge_depth,numeric,"depth in meters, of where from the top of the sludge the sample was taken"
@@ -9,15 +9,15 @@ data,containment.rda,containment_volume,numeric,total volume of the containment 
 data,containment.rda,fs_volume,numeric,total volume of the sludge in containment in m^3
 data,containment.rda,accumulation_rate,numeric,the accumulation rate in litres/capita -year (based on total volume and number of users)
 data,containment.rda,scum_depth,numeric,the depth of the top scum layer in centimeters
-data,ghg.rda,sample_id,factor,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
-data,ghg.rda,location_id,factor,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
+data,ghg.rda,sample_id,character,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
+data,ghg.rda,location_id,character,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
 data,ghg.rda,date,"c(""POSIXct"", ""POSIXt"")",date of sampling
 data,ghg.rda,users,numeric,average number of users for the sanitation system that was sampled
 data,ghg.rda,flux_ch4,numeric,methane flux in grams/capita-day - based on number of users
 data,ghg.rda,flux_co2,numeric,carbon dioxide flux in gram/capita-day - based on number of users
 data,ghg.rda,flux_n20,numeric,nitrious oxide flux in gram/capita-day - based on number of users
-data,household_survey.rda,sample_id,factor,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
-data,household_survey.rda,location_id,factor,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
+data,household_survey.rda,sample_id,character,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
+data,household_survey.rda,location_id,character,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
 data,household_survey.rda,date,"c(""POSIXct"", ""POSIXt"")",date of sampling
 data,household_survey.rda,local_area_name,factor,community / area name that locals commonly use where samples were taken
 data,household_survey.rda,establishment_type,factor,"type of establishment where sampling occurred (household, commercial, school, office building, other)"
@@ -55,8 +55,8 @@ data,household_survey.rda,emptying_interval,numeric,What is the average / typica
 data,household_survey.rda,rainy_season,logical,Is it currently the rainy season?
 data,household_survey.rda,solid_waste,logical,"Does the containment contain solid waste (i.e., garbage)"
 data,household_survey.rda,type,factor,"If there is solid waste, what type is it? "
-data,phys_chem_parameter.rda,sample_id,factor,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
-data,phys_chem_parameter.rda,location_id,factor,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
+data,phys_chem_parameter.rda,sample_id,character,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
+data,phys_chem_parameter.rda,location_id,character,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
 data,phys_chem_parameter.rda,date,"c(""POSIXct"", ""POSIXt"")",date of sampling
 data,phys_chem_parameter.rda,depth_id,factor,"unique identifier for each sample indicating the location in the containment (T = top, M = middle, B = bottom)"
 data,phys_chem_parameter.rda,sludge_depth,numeric,"depth in meters, of where from the top of the sludge the sample was taken"
