@@ -177,8 +177,20 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 ```{r}
 library(fecalcanuga)
+library(ggplot2)
+# Filter out rows with NA values in COD or vss
+filtered_data <- phys_chem_parameter %>%
+  filter(!is.na(COD) & !is.na(vss))
 
-# Provide some example code here
+# Plot VSS vs COD
+ggplot(filtered_data, aes(x = vss, y = COD)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  theme_minimal() +
+  labs(title = "VSS vs COD",
+       x = "VSS (mg/L)",
+       y = "COD (mg/L)")
+
 ```
 
 
