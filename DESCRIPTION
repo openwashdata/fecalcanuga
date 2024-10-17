@@ -4,11 +4,11 @@ Version: 0.0.0.9000
 Authors@R: c(
     person("Kelsey", "Shaw", , "kelseyshaw@uvic.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-7417-110X")),
-    person("Dr. Caetano", "Dorea", , "caetanodorea@uvic.ca", role = "aut",
+    person("Caetano", "Dorea", , "caetanodorea@uvic.ca", role = "aut",
            comment = c(ORCID = "0000-0001-9367-0668")),
-    person("Dr. Linda", "Strande", , "linda.strande@eawag.ch", role = "aut",
+    person("Linda", "Strande", , "linda.strande@eawag.ch", role = "aut",
            comment = c(ORCID = "0000-0003-4477-6268")),
-    person("Dr. Charles", "Niwagaba", , "cbniwagaba@gmail.com", role = "ctb",
+    person("Charles", "Niwagaba", , "cbniwagaba@gmail.com", role = "ctb",
            comment = c(ORCID = "0000-0003-1494-1939")),
     person("Mian", "Zhong", , "mzhong@ethz.ch", role = "aut",
            comment = c(ORCID = "0009-0009-4546-7214"))
@@ -23,6 +23,6 @@ Depends:
 Language: en-GB
 LazyData: true
 Config/Needs/website: rmarkdown
-Date: 2024-07-03
-URL: https://github.com/kelseyshaw/fecalcanuga
-BugReports: https://github.com/kelseyshaw/fecalcanuga/issues
+Date: 2024-10-17
+URL: https://github.com/openwashdata/fecalcanuga
+BugReports: https://github.com/openwashdata/fecalcanuga/issues

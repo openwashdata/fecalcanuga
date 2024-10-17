@@ -8,7 +8,7 @@ message: 'To cite package "fecalcanuga" in publications use:'
 type: software
 license: CC-BY-4.0
 title: 'fecalcanuga: Demographic, Environmental, Technical and Physio-chemical Data
-  on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda.'
+  on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda'
 version: 0.0.0.9000
 abstract: This data pacakge contains data representing 5 months of field work from
   April - June 2023 (Canada) and January - February (Uganda) collecting household
@@ -33,24 +33,12 @@ authors:
   given-names: Mian
   email: mzhong@ethz.ch
   orcid: https://orcid.org/0009-0009-4546-7214
-repository-code: https://github.com/kelseyshaw/fecalcanuga
-url: https://github.com/kelseyshaw/fecalcanuga
-date-released: '2024-07-03'
+repository-code: https://github.com/openwashdata/fecalcanuga
+url: https://github.com/openwashdata/fecalcanuga
+date-released: '2024-10-17'
 contact:
 - family-names: Shaw
   given-names: Kelsey
   email: kelseyshaw@uvic.ca
   orcid: https://orcid.org/0000-0001-7417-110X
-references:
-- type: software
-  title: 'R: A Language and Environment for Statistical Computing'
-  notes: Depends
-  url: https://www.R-project.org/
-  authors:
-  - name: R Core Team
-  institution:
-    name: R Foundation for Statistical Computing
-    address: Vienna, Austria
-  year: '2024'
-  version: '>= 2.10'
 
