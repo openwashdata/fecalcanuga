@@ -85,4 +85,10 @@ writeData(wb, "Phys Chem Parameter Data", phys_chem_parameter)
 saveWorkbook(wb, here::here("inst", "extdata", "fecalcanuga.xlsx"),
              overwrite = TRUE)
 
+## Write the data to a .csv file
+
+write_csv(household_survey, here::here("inst", "extdata", "household_survey.csv"))
+write_csv(containment, here::here("inst", "extdata", "containment.csv"))
+write_csv(ghg, here::here("inst", "extdata", "ghg.csv"))
+write_csv(phys_chem_parameter, here::here("inst", "extdata", "phys_chem_parameter.csv"))
 
