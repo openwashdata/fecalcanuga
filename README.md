@@ -45,7 +45,6 @@ file from the table below.
 | dataset             | CSV                                                                                                     | XLSX                                                                                                      |
 |:--------------------|:--------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------|
 | containment         | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/containment.csv)         | [Download XLSX](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/containment.xlsx)         |
-| ghg                 | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/ghg.csv)                 | [Download XLSX](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/ghg.xlsx)                 |
 | household_survey    | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/household_survey.csv)    | [Download XLSX](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/household_survey.xlsx)    |
 | phys_chem_parameter | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/phys_chem_parameter.csv) | [Download XLSX](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/phys_chem_parameter.xlsx) |
 
@@ -72,7 +71,7 @@ containment |>
   gt::as_raw_html()
 ```
 
-<div id="fepnnoqmkj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="xpbcokusxs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -148,7 +147,7 @@ description
 sample_id
 </td>
 <td style="text-align:left;">
-character
+factor
 </td>
 <td style="text-align:left;">
 unique identifier for each sampling location in the format
@@ -160,7 +159,7 @@ unique identifier for each sampling location in the format
 location_id
 </td>
 <td style="text-align:left;">
-character
+factor
 </td>
 <td style="text-align:left;">
 unique location identifier for each sampling day in the format of
@@ -209,7 +208,7 @@ containment_depth
 numeric
 </td>
 <td style="text-align:left;">
-depth in meters, from the top of the containment to the bottom of the
+depth, in meters, from the top of the containment to the bottom of the
 containment
 </td>
 </tr>
@@ -277,7 +276,7 @@ ghg |>
   gt::as_raw_html()
 ```
 
-<div id="rggxrymhse" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="vgmtituihz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -338,81 +337,24 @@ description
 <tbody>
 <tr>
 <td style="text-align:left;">
-sample_id
+NA
 </td>
 <td style="text-align:left;">
-character
+NA
 </td>
 <td style="text-align:left;">
-unique identifier for each sampling location in the format
-\##-Location-ddmmyyyy
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-location_id
-</td>
-<td style="text-align:left;">
-character
-</td>
-<td style="text-align:left;">
-unique location identifier for each sampling day in the format of
-(#)-day of sampling (a) - location in that day
+NA
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-date
+:————-
 </td>
 <td style="text-align:left;">
-c(“POSIXct”, “POSIXt”)
+:————-
 </td>
 <td style="text-align:left;">
-date of sampling
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-users
-</td>
-<td style="text-align:left;">
-numeric
-</td>
-<td style="text-align:left;">
-average number of users for the sanitation system that was sampled
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-flux_ch4
-</td>
-<td style="text-align:left;">
-numeric
-</td>
-<td style="text-align:left;">
-methane flux in grams/capita-day - based on number of users
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-flux_co2
-</td>
-<td style="text-align:left;">
-numeric
-</td>
-<td style="text-align:left;">
-carbon dioxide flux in gram/capita-day - based on number of users
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-flux_n20
-</td>
-<td style="text-align:left;">
-numeric
-</td>
-<td style="text-align:left;">
-nitrious oxide flux in gram/capita-day - based on number of users
+:———–
 </td>
 </tr>
 </tbody>
@@ -436,7 +378,7 @@ household_survey |>
   gt::as_raw_html()
 ```
 
-<div id="haikocqyif" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="eugnubnzpo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -628,7 +570,7 @@ description
 sample_id
 </td>
 <td style="text-align:left;">
-character
+factor
 </td>
 <td style="text-align:left;">
 unique identifier for each sampling location in the format
@@ -640,7 +582,7 @@ unique identifier for each sampling location in the format
 location_id
 </td>
 <td style="text-align:left;">
-character
+factor
 </td>
 <td style="text-align:left;">
 unique location identifier for each sampling day in the format of
@@ -709,10 +651,11 @@ emptied
 shared_toilet
 </td>
 <td style="text-align:left;">
-logical
+factor
 </td>
 <td style="text-align:left;">
-Is the toilet(s) connected to the sanitation containment shared or not?
+Is the toilet(s) connected to the sanitation containment shared or not
+(Yes/No)
 </td>
 </tr>
 <tr>
@@ -767,10 +710,10 @@ concreate, PVC, unlined, etc.)
 change_in_liquid_level
 </td>
 <td style="text-align:left;">
-logical
+factor
 </td>
 <td style="text-align:left;">
-Is there a change in liquid level due to seasonal variation?
+Is there a change in liquid level due to seasonal variation (Y/N)
 </td>
 </tr>
 <tr>
@@ -778,10 +721,10 @@ Is there a change in liquid level due to seasonal variation?
 baffles
 </td>
 <td style="text-align:left;">
-logical
+factor
 </td>
 <td style="text-align:left;">
-Are there baffles in the containment?
+Are there baffles in the containment (Y/N/I don’t know)
 </td>
 </tr>
 <tr>
@@ -789,10 +732,10 @@ Are there baffles in the containment?
 outflow
 </td>
 <td style="text-align:left;">
-logical
+factor
 </td>
 <td style="text-align:left;">
-Is there an outflow for the containment?
+Is there an outflow for the containment (Y/N/I don’t know)
 </td>
 </tr>
 <tr>
@@ -834,10 +777,10 @@ What type of material is used for anal cleansing (water, paper, both)
 paper
 </td>
 <td style="text-align:left;">
-logical
+numeric
 </td>
 <td style="text-align:left;">
-Is paper used for anal cleansing?
+Is paper used for anal cleansing (Yes = 1 &#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -845,10 +788,10 @@ Is paper used for anal cleansing?
 water
 </td>
 <td style="text-align:left;">
-logical
+numeric
 </td>
 <td style="text-align:left;">
-Is water used for anal cleansing?
+Is water used for anal cleansing (Yes = 1 &#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -856,10 +799,10 @@ Is water used for anal cleansing?
 additives
 </td>
 <td style="text-align:left;">
-logical
+factor
 </td>
 <td style="text-align:left;">
-Are there additives added to the containment?
+Are there additives added to the containment (Y/N/I don’t know)
 </td>
 </tr>
 <tr>
@@ -901,10 +844,11 @@ kitchen, laundry, bathing)
 toilet
 </td>
 <td style="text-align:left;">
-logical
+numeric
 </td>
 <td style="text-align:left;">
-Does the containment collect toilet type of wastewater?
+Does the containment collect this type of wastewater (Yes = 1 &#124; No
+= 0)
 </td>
 </tr>
 <tr>
@@ -912,10 +856,11 @@ Does the containment collect toilet type of wastewater?
 bathing
 </td>
 <td style="text-align:left;">
-logical
+numeric
 </td>
 <td style="text-align:left;">
-Does the containment collect bathing type of wastewater?
+Does the containment collect this type of wastewater (Yes = 1 &#124; No
+= 0)
 </td>
 </tr>
 <tr>
@@ -923,10 +868,11 @@ Does the containment collect bathing type of wastewater?
 laundry
 </td>
 <td style="text-align:left;">
-logical
+numeric
 </td>
 <td style="text-align:left;">
-Does the containment collect laundry type of wastewater?
+Does the containment collect this type of wastewater (Yes = 1 &#124; No
+= 0)
 </td>
 </tr>
 <tr>
@@ -934,10 +880,11 @@ Does the containment collect laundry type of wastewater?
 kitchen
 </td>
 <td style="text-align:left;">
-logical
+numeric
 </td>
 <td style="text-align:left;">
-Does the containment collect kitchen type of wastewater?
+Does the containment collect this type of wastewater (Yes = 1 &#124; No
+= 0)
 </td>
 </tr>
 <tr>
@@ -945,10 +892,23 @@ Does the containment collect kitchen type of wastewater?
 water_connection
 </td>
 <td style="text-align:left;">
-logical
+factor
 </td>
 <td style="text-align:left;">
-Is there a water connection?
+What type of water connection does the establishment where sampling is
+occurring have (tap inside building, standpipe, other)?
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+where
+</td>
+<td style="text-align:left;">
+factor
+</td>
+<td style="text-align:left;">
+Does the establishment have this type of water connection (Yes = 1
+&#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -1014,10 +974,11 @@ What (in m^3) is the total volume of the containment?
 fully_emptied
 </td>
 <td style="text-align:left;">
-logical
+factor
 </td>
 <td style="text-align:left;">
-When the system was last emptied was it emptied fully?
+When the system was last emptied was it emptied fully? (Y/N/I don’t
+know)
 </td>
 </tr>
 <tr>
@@ -1037,10 +998,10 @@ containment?
 rainy_season
 </td>
 <td style="text-align:left;">
-logical
+factor
 </td>
 <td style="text-align:left;">
-Is it currently the rainy season?
+Is it currently the rainy season? (Y/N)
 </td>
 </tr>
 <tr>
@@ -1048,10 +1009,10 @@ Is it currently the rainy season?
 solid_waste
 </td>
 <td style="text-align:left;">
-logical
+factor
 </td>
 <td style="text-align:left;">
-Does the containment contain solid waste (i.e., garbage)
+Does the containment contain solid waste (i.e., garbage) (Y/N)
 </td>
 </tr>
 <tr>
@@ -1063,6 +1024,17 @@ factor
 </td>
 <td style="text-align:left;">
 If there is solid waste, what type is it?
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+notes
+</td>
+<td style="text-align:left;">
+factor
+</td>
+<td style="text-align:left;">
+Any additional important notings / observations
 </td>
 </tr>
 </tbody>
@@ -1086,7 +1058,7 @@ phys_chem_parameter |>
   gt::as_raw_html()
 ```
 
-<div id="gqjvedafyw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="fqeofodaui" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -1238,7 +1210,7 @@ description
 sample_id
 </td>
 <td style="text-align:left;">
-character
+factor
 </td>
 <td style="text-align:left;">
 unique identifier for each sampling location in the format
@@ -1250,7 +1222,7 @@ unique identifier for each sampling location in the format
 location_id
 </td>
 <td style="text-align:left;">
-character
+factor
 </td>
 <td style="text-align:left;">
 unique location identifier for each sampling day in the format of
