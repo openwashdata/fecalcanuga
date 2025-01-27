@@ -31,7 +31,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/kelseyshaw/fecalcanuga/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kelseyshaw/fecalcanuga/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of `fecalcanuga` is to provide data representing 5 months of field work from April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.
+The goal of `fecalcanuga` is to provide data representing 5 months of field work from April - June 2023 Southern Coastal BC (Canada) and Kampala (Uganda) January - February 2024 collecting household and commercial non-sewered containment data and characterizing physical, chemical and biological data for 22 non-sewered sanitation sites in Southern Coastal British Columbia, Canada and 19 sites in Kampala, Uganda.
 
 ## Installation
 
@@ -75,7 +75,7 @@ read_csv("data-raw/dictionary.csv") |>
 
 ## Data
 
-The package provides access to 4 datasets: `containment`, `ghg`, `household_survey`, and `phys_chem_parameter`.
+The package provides access to 3 datasets: `containment`, `household_survey`, and `phys_chem_parameter`.
 
 ```{r}
 library(fecalcanuga)
@@ -97,29 +97,6 @@ For an overview of the variable names, see the following table.
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |>
   dplyr::filter(file_name == "containment.rda") |>
-  dplyr::select(variable_name:description) |> 
-  knitr::kable() |> 
-  kableExtra::kable_styling("striped") |> 
-  kableExtra::scroll_box(height = "200px")
-```
-
-### ghg
-
-The dataset `ghg` contains data about the calculated mass flux rates from the measured point-source in situ GHG measurments and the observed person equivalents for each containment for the three key greenhouse gases (CH4, CO2 and N2O).
-It has `r nrow(ghg)` observations and `r ncol(ghg)` variables
-
-```{r}
-ghg |> 
-  head(3) |> 
-  gt::gt() |>
-  gt::as_raw_html()
-```
-
-For an overview of the variable names, see the following table.
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-readr::read_csv("data-raw/dictionary.csv") |>
-  dplyr::filter(file_name == "ghg.rda") |>
   dplyr::select(variable_name:description) |> 
   knitr::kable() |> 
   kableExtra::kable_styling("striped") |> 
