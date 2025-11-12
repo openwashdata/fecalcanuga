@@ -42,10 +42,10 @@ library(kableExtra)
 Alternatively, you can download the individual datasets as a CSV file
 from the table below.
 
-| dataset             | CSV                                                                                                     |
-|:--------------------|:--------------------------------------------------------------------------------------------------------|
-| containment         | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/containment.csv)         |
-| household_survey    | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/household_survey.csv)    |
+| dataset | CSV |
+|:---|:---|
+| containment | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/containment.csv) |
+| household_survey | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/household_survey.csv) |
 | phys_chem_parameter | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/phys_chem_parameter.csv) |
 
 ## Data
@@ -71,7 +71,7 @@ containment |>
   gt::as_raw_html()
 ```
 
-<div id="kcktnemoea" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="vfzovezdta" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -128,136 +128,229 @@ For an overview of the variable names, see the following table.
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_name
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_type
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 description
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 sample_id
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 unique identifier for each sampling location in the format
 \##-Location-ddmmyyyy
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 location_id
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 unique location identifier for each sampling day in the format of
 (#)-day of sampling (a) - location in that day
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 date
 </td>
+
 <td style="text-align:left;">
+
 c(“POSIXct”, “POSIXt”)
 </td>
+
 <td style="text-align:left;">
+
 date of sampling
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 area
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 surface area of liquid surface in containment m^2
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 sludge_depth
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 depth in meters, of where from the top of the sludge the sample was
 taken
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 containment_depth
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 depth, in meters, from the top of the containment to the bottom of the
 containment
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 containment_volume
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 total volume of the containment in m^3
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 fs_volume
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 total volume of the sludge in containment in m^3
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 accumulation_rate
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 the accumulation rate in litres/capita -year (based on total volume and
 number of users)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 scum_depth
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 the depth of the top scum layer in centimeters
 </td>
+
 </tr>
+
 </tbody>
+
 </table>
 
 </div>
@@ -278,7 +371,7 @@ household_survey |>
   gt::as_raw_html()
 ```
 
-<div id="laoxxegxlu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="grekdfufui" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -451,493 +544,834 @@ For an overview of the variable names, see the following table.
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_name
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_type
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 description
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 sample_id
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 unique identifier for each sampling location in the format
 \##-Location-ddmmyyyy
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 location_id
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 unique location identifier for each sampling day in the format of
 (#)-day of sampling (a) - location in that day
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 date
 </td>
+
 <td style="text-align:left;">
+
 c(“POSIXct”, “POSIXt”)
 </td>
+
 <td style="text-align:left;">
+
 date of sampling
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 local_area_name
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 community / area name that locals commonly use where samples were taken
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 establishment_type
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 type of establishment where sampling occurred (household, commercial,
 school, office building, other)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 users
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 average number of users for the sanitation system that was sampled
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 last_emptied
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 in years how long ago from sampling date the containment was last
 emptied
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 shared_toilet
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Is the toilet(s) connected to the sanitation containment shared or not
 (Yes/No)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 rent_or_own
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Is the establishment where the containment is rented or owned by the
 head of household?
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 containment
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 The type of containment (septic tank, pit latrine, treatment plant unit,
 etc.)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 lining
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 The type of containment lining (fully lined, unlined, don’t know)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 lining_material
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 The material the lining is made of if it is lined (fiberglass,
 concreate, PVC, unlined, etc.)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 change_in_liquid_level
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Is there a change in liquid level due to seasonal variation (Y/N)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 baffles
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Are there baffles in the containment (Y/N/I don’t know)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 outflow
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Is there an outflow for the containment (Y/N/I don’t know)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 outflow_location
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 If there is an outflow, where is it located (i.e., leech field)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 toilet_type
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 What is the type of toilet connected to the sanitation system (cistern
 flush, pour-flush, etc.)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 anal_cleansing_material
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 What type of material is used for anal cleansing (water, paper, both)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 paper
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Is paper used for anal cleansing (Yes = 1 &#124; No = 0)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 water
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Is water used for anal cleansing (Yes = 1 &#124; No = 0)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 additives
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Are there additives added to the containment (Y/N/I don’t know)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 frequency
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 If additives are added, in what frequency?
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 chemicals
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 What chemicals are added to the sanitation system?
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 wastewater_type
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 What are the types of wastewater that the containment collects (toilet,
 kitchen, laundry, bathing)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 toilet
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Does the containment collect this type of wastewater (Yes = 1 &#124; No
 = 0)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 bathing
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Does the containment collect this type of wastewater (Yes = 1 &#124; No
 = 0)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 laundry
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Does the containment collect this type of wastewater (Yes = 1 &#124; No
 = 0)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 kitchen
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Does the containment collect this type of wastewater (Yes = 1 &#124; No
 = 0)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 water_connection
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 What type of water connection does the establishment where sampling is
 occurring have (tap inside building, standpipe, other)?
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 where
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Does the establishment have this type of water connection (Yes = 1
 &#124; No = 0)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 tap_inside_building
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Does the establishment have this type of water connection (Yes = 1
 &#124; No = 0)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 standpipe
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Does the establishment have this type of water connection (Yes = 1
 &#124; No = 0)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 containment_age
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 What is the age (in years) of the containment system?
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 containment_constructed
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Who constructed the containment system (Technician, professional
 engineering, myself, don’t know)?
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 containment_volume
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 What (in m^3) is the total volume of the containment?
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 fully_emptied
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 When the system was last emptied was it emptied fully? (Y/N/I don’t
 know)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 emptying_interval
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 What is the average / typical emptying interval (in years) of the
 containment?
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 rainy_season
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Is it currently the rainy season? (Y/N)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 solid_waste
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Does the containment contain solid waste (i.e., garbage) (Y/N)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 type
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 If there is solid waste, what type is it?
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 notes
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 Any additional important notings / observations
 </td>
+
 </tr>
+
 </tbody>
+
 </table>
 
 </div>
@@ -958,7 +1392,7 @@ phys_chem_parameter |>
   gt::as_raw_html()
 ```
 
-<div id="qackhqmxcb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="alyfuhagoz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -1091,347 +1525,592 @@ For an overview of the variable names, see the following table.
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_name
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_type
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 description
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 sample_id
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 unique identifier for each sampling location in the format
 \##-Location-ddmmyyyy
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 location_id
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 unique location identifier for each sampling day in the format of
 (#)-day of sampling (a) - location in that day
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 date
 </td>
+
 <td style="text-align:left;">
+
 c(“POSIXct”, “POSIXt”)
 </td>
+
 <td style="text-align:left;">
+
 date of sampling
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_id
 </td>
+
 <td style="text-align:left;">
+
 factor
 </td>
+
 <td style="text-align:left;">
+
 unique identifier for each sample indicating the location in the
 containment (T = top, M = middle, B = bottom)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 sludge_depth
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 depth in meters, of where from the top of the sludge the sample was
 taken
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 temperature
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Temperature of the sludge at the insitu sampling location (in degrees
 Celsius)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 DO
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 dissolved oxygen concentration in mg/L at the insitu sampling location
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 pH
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 pH value at the insitu sampling location
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 ORP
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 oxidation reduction potential, measured in millivolts, at the insitu
 sampling locations
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 EC
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 electrical conductivity, measured in microSiemens, at the insitu
 sampling locations
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 COD
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Chemical oxygen demand, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 soluble_COD
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Soluble chemical oxygen demand, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 sulphide
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Sulphide, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 total_nitrogen
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Total Nitrogen, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 nitrite
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Nitrite, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 nitrate
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Nitrate, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 ammonia
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Ammonia, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 TKN
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Total Kjeldahl Nitrogen, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 ortho_phosphorous
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Ortho Phosphorous, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 total_phosphorous
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Total Phosphorous, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 BOD
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Biochemical oxygen demand, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 TOC
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Total organic carbon, mg/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 ts
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Total solids, g/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 vs
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Volatile Solids, g/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 vs_percent
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Volatile Solids, % total solids
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 sand_content
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Sand content, g/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 tss
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Total suspended solids, g/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 vss
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Volatile suspended solids, g/L
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 vss_tss
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 VSS/TSS (ratio)
 </td>
+
 </tr>
+
 </tbody>
+
 </table>
 
 </div>
