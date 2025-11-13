@@ -8,7 +8,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-9367-0668")),
     person("Linda", "Strande", , "linda.strande@eawag.ch", role = "aut",
            comment = c(ORCID = "0000-0003-4477-6268")),
-    person("Charles", "Niwagaba", , "cbniwagaba@gmail.com", role = "ctb",
+    person("Charles", "Niwagaba", , "cbniwagaba@gmail.com", role = "aut",
            comment = c(ORCID = "0000-0003-1494-1939")),
     person("Mian", "Zhong", , "mzhong@ethz.ch", role = "aut",
            comment = c(ORCID = "0009-0009-4546-7214"))
@@ -17,7 +17,7 @@ Description: This data pacakge contains data representing 5 months of field work
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Depends: 
     R (>= 2.10)
 Language: en-GB

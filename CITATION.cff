@@ -21,18 +21,18 @@ authors:
   given-names: Kelsey
   email: kelseyshaw@uvic.ca
   orcid: https://orcid.org/0000-0001-7417-110X
-- family-names: Niwagaba
-  given-names: Charles
-  email: Charles.niwagaba@mak.ac.ug
-  orcid: https://orcid.org/0000-0003-1494-1939
-- family-names: Strande
-  given-names: Linda
-  email: linda.strande@eawag.ch
-  orcid: https://orcid.org/0000-0003-4477-6268
 - family-names: Dorea
   given-names: Caetano
   email: caetanodorea@uvic.ca
   orcid: https://orcid.org/0000-0001-9367-0668
+- family-names: Strande
+  given-names: Linda
+  email: linda.strande@eawag.ch
+  orcid: https://orcid.org/0000-0003-4477-6268
+- family-names: Niwagaba
+  given-names: Charles
+  email: cbniwagaba@gmail.com
+  orcid: https://orcid.org/0000-0003-1494-1939
 - family-names: Zhong
   given-names: Mian
   email: mzhong@ethz.ch
