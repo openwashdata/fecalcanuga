@@ -1,6 +1,6 @@
 #' household_survey: Demographic, Environmental and Technical Household / Institutional Data for each Non-Sewered Sanitation Containment
 #'
-#' This data set contains the collected household / institutional survey data for each location where a non-sewered sanitation containmenet was sampled. This includes demographic infromation, operational and maintenance information and some technical and environmental parameters.
+#' This data set contains the collected household / institutional survey data for each location where a non-sewered sanitation containment was sampled. This includes demographic information, operational and maintenance information and some technical and environmental parameters.
 #'
 #' @format A tibble with 41 rows and 39 variables
 #' \describe{

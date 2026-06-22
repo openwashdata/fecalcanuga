@@ -42,6 +42,6 @@ A tibble with 119 rows and 29 variables
 phys_chem_parameter
 }
 \description{
-This data set contains the measured in situ and analyzed in laboratory physical, chemical and biological parameters pertaining to each containment sampled as well as at different veritcal locations in each containment (i.e., Top of containment, middle and bottom).
+This data set contains the measured in situ and analyzed in laboratory physical, chemical and biological parameters pertaining to each containment sampled as well as at different vertical locations in each containment (i.e., Top of containment, middle and bottom).
 }
 \keyword{datasets}

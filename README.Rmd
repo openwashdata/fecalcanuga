@@ -39,7 +39,7 @@ You can install the development version of fecalcanuga from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("kelseyshaw/fecalcanuga")
+devtools::install_github("openwashdata/fecalcanuga")
 ```
 
 ```{r}
@@ -57,7 +57,7 @@ Alternatively, you can download the individual datasets as a CSV file from the t
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
-extdata_path <- "https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/"
+extdata_path <- "https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/"
 
 read_csv("data-raw/dictionary.csv") |> 
   distinct(file_name) |> 
@@ -102,7 +102,7 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 ### household_survey
 
-The dataset `household_survey` contains data about the collected household / institutional survey data for each location where a non-sewered sanitation containmenet was sampled. This includes demographic infromation, operational and maintenance information and some technical and environmental parameters.
+The dataset `household_survey` contains data about the collected household / institutional survey data for each location where a non-sewered sanitation containment was sampled. This includes demographic infromation, operational and maintenance information and some technical and environmental parameters.
 It has `r nrow(household_survey)` observations and `r ncol(household_survey)` variables
 
 ```{r}

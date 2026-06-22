@@ -24,7 +24,7 @@ You can install the development version of fecalcanuga from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("kelseyshaw/fecalcanuga")
+devtools::install_github("openwashdata/fecalcanuga")
 ```
 
 ``` r
@@ -43,9 +43,9 @@ from the table below.
 
 | dataset | CSV |
 |:---|:---|
-| containment | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/containment.csv) |
-| household_survey | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/household_survey.csv) |
-| phys_chem_parameter | [Download CSV](https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/phys_chem_parameter.csv) |
+| containment | [Download CSV](https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/containment.csv) |
+| household_survey | [Download CSV](https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/household_survey.csv) |
+| phys_chem_parameter | [Download CSV](https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/phys_chem_parameter.csv) |
 
 ## Data
 
@@ -70,7 +70,7 @@ containment |>
   gt::as_raw_html()
 ```
 
-<div id="yepgxulogp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="kgmsxatxye" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -118,15 +118,14 @@ containment |>
 <td headers="accumulation_rate" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">705.6167</td>
 <td headers="scum_depth" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">0</td></tr>
   </tbody>
-  &#10;  
-</table>
+  &#10;</table>
 </div>
 
 For an overview of the variable names, see the following table.
 
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
-<table class="table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
 
 <thead>
 
@@ -358,7 +357,7 @@ the depth of the top scum layer in centimeters
 
 The dataset `household_survey` contains data about the collected
 household / institutional survey data for each location where a
-non-sewered sanitation containmenet was sampled. This includes
+non-sewered sanitation containment was sampled. This includes
 demographic infromation, operational and maintenance information and
 some technical and environmental parameters. It has 41 observations and
 39 variables
@@ -370,7 +369,7 @@ household_survey |>
   gt::as_raw_html()
 ```
 
-<div id="mbgxbsdehe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="oxtmskhlax" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -534,15 +533,14 @@ household_survey |>
 <td headers="solid_waste" class="gt_row gt_center" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: center;" valign="middle" align="center">FALSE</td>
 <td headers="type" class="gt_row gt_center" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: center;" valign="middle" align="center">NA</td></tr>
   </tbody>
-  &#10;  
-</table>
+  &#10;</table>
 </div>
 
 For an overview of the variable names, see the following table.
 
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
-<table class="table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
 
 <thead>
 
@@ -799,8 +797,8 @@ factor
 
 <td style="text-align:left;">
 
-The material the lining is made of if it is lined (fiberglass,
-concreate, PVC, unlined, etc.)
+The material the lining is made of if it is lined (fiberglass, concrete,
+PVC, unlined, etc.)
 </td>
 
 </tr>
@@ -934,7 +932,7 @@ numeric
 
 <td style="text-align:left;">
 
-Is paper used for anal cleansing (Yes = 1 &#124; No = 0)
+Is paper used for anal cleansing (Yes = 1 \&#124; No = 0)
 </td>
 
 </tr>
@@ -953,7 +951,7 @@ numeric
 
 <td style="text-align:left;">
 
-Is water used for anal cleansing (Yes = 1 &#124; No = 0)
+Is water used for anal cleansing (Yes = 1 \&#124; No = 0)
 </td>
 
 </tr>
@@ -1049,7 +1047,7 @@ numeric
 
 <td style="text-align:left;">
 
-Does the containment collect this type of wastewater (Yes = 1 &#124; No
+Does the containment collect this type of wastewater (Yes = 1 \&#124; No
 = 0)
 </td>
 
@@ -1069,7 +1067,7 @@ numeric
 
 <td style="text-align:left;">
 
-Does the containment collect this type of wastewater (Yes = 1 &#124; No
+Does the containment collect this type of wastewater (Yes = 1 \&#124; No
 = 0)
 </td>
 
@@ -1089,7 +1087,7 @@ numeric
 
 <td style="text-align:left;">
 
-Does the containment collect this type of wastewater (Yes = 1 &#124; No
+Does the containment collect this type of wastewater (Yes = 1 \&#124; No
 = 0)
 </td>
 
@@ -1109,7 +1107,7 @@ numeric
 
 <td style="text-align:left;">
 
-Does the containment collect this type of wastewater (Yes = 1 &#124; No
+Does the containment collect this type of wastewater (Yes = 1 \&#124; No
 = 0)
 </td>
 
@@ -1139,26 +1137,6 @@ occurring have (tap inside building, standpipe, other)?
 
 <td style="text-align:left;">
 
-where
-</td>
-
-<td style="text-align:left;">
-
-factor
-</td>
-
-<td style="text-align:left;">
-
-Does the establishment have this type of water connection (Yes = 1
-&#124; No = 0)
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
 tap_inside_building
 </td>
 
@@ -1170,7 +1148,7 @@ numeric
 <td style="text-align:left;">
 
 Does the establishment have this type of water connection (Yes = 1
-&#124; No = 0)
+\&#124; No = 0)
 </td>
 
 </tr>
@@ -1190,7 +1168,7 @@ numeric
 <td style="text-align:left;">
 
 Does the establishment have this type of water connection (Yes = 1
-&#124; No = 0)
+\&#124; No = 0)
 </td>
 
 </tr>
@@ -1350,25 +1328,6 @@ If there is solid waste, what type is it?
 
 </tr>
 
-<tr>
-
-<td style="text-align:left;">
-
-notes
-</td>
-
-<td style="text-align:left;">
-
-factor
-</td>
-
-<td style="text-align:left;">
-
-Any additional important notings / observations
-</td>
-
-</tr>
-
 </tbody>
 
 </table>
@@ -1391,7 +1350,7 @@ phys_chem_parameter |>
   gt::as_raw_html()
 ```
 
-<div id="uhubejxmhc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="darqgulnfm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -1515,15 +1474,14 @@ phys_chem_parameter |>
 <td headers="vss" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">0.31974910</td>
 <td headers="vss_tss" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">0.6568736</td></tr>
   </tbody>
-  &#10;  
-</table>
+  &#10;</table>
 </div>
 
 For an overview of the variable names, see the following table.
 
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
-<table class="table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
 
 <thead>
 
@@ -2134,7 +2092,7 @@ ggplot(filtered_data, aes(x = vss, y = COD)) +
        y = "COD (mg/L)")
 ```
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-11-1.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 ## License
 
@@ -2149,19 +2107,19 @@ Please cite this package using:
 citation("fecalcanuga")
 #> To cite package 'fecalcanuga' in publications use:
 #> 
-#>   Shaw K, Dorea C, Strande L, Niwagaba C, Zhong M (2024). "fecalcanuga:
+#>   Shaw K, Dorea C, Strande L, Niwagaba C, Zhong M (2026). "fecalcanuga:
 #>   Demographic, Environmental, Technical and Physio-chemical Data on Non
 #>   Sewered Sanitation Containments in Rural Canada and Urban Uganda."
 #>   <https://github.com/openwashdata/fecalcanuga>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Misc{shaw_etall:2024,
+#>   @Misc{shaw_etall:2026,
 #>     title = {fecalcanuga: Demographic, Environmental, Technical and Physio-chemical Data on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda},
 #>     author = {Kelsey Shaw and Caetano Dorea and Linda Strande and Charles Niwagaba and Mian Zhong},
-#>     year = {2024},
+#>     year = {2026},
 #>     url = {https://github.com/openwashdata/fecalcanuga},
-#>     abstract = {This data pacakge contains data representing 5 months of field work from April - June 2023 (Canada) and January - February (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.},
-#>     version = {0.0.0.9000},
+#>     abstract = {This data package contains data representing 5 months of field work from April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.},
+#>     version = {0.1.0},
 #>   }
 ```

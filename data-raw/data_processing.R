@@ -28,11 +28,6 @@ phys_chem_parameter <- read_excel(here("data-raw", "rawdata_edited.xlsx"),
 # Tidy data --------------------------------------------------------------------
 ## Clean the raw data into a tidy format here
 ### Change data types
-# Get the class (data type) of each column
-sapply(containment, class)
-sapply(household_survey, class)
-sapply(phys_chem_parameter, class)
-
 # Convert all character columns to factors, and fix column that should be
 ##read in as numeric
 household_survey <- household_survey %>%
@@ -48,11 +43,6 @@ household_survey <- household_survey %>%
 phys_chem_parameter$TOC <- as.numeric(phys_chem_parameter$TOC)
 phys_chem_parameter <- phys_chem_parameter %>% mutate_if(is.character,
                                                                    as.factor)
-
-# View the structure of the dataframe to verify changes
-str(containment)
-str(household_survey)
-str(phys_chem_parameter)
 
 # Export Data ------------------------------------------------------------------
 ## Save data within package data directory
