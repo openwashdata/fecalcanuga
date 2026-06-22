@@ -28,6 +28,7 @@ knitr::opts_chunk$set(
 
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20795917.svg)](https://zenodo.org/doi/10.5281/zenodo.20795917)
 <!-- badges: end -->
 
 The goal of `fecalcanuga` is to provide data representing 5 months of field work from April - June 2023 in Southern Coastal BC (Canada) and in Kampala (Uganda) from January - February 2024 where household and commercial non-sewered containment data was collected, characterizing demographic, technical, environmental, physical, chemical and biological data for 22 non-sewered sanitation sites in Southern Coastal British Columbia, Canada and 19 sites in Kampala, Uganda.
