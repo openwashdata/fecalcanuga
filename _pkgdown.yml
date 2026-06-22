@@ -1,5 +1,5 @@
 
-url: https://github.com/kelseyshaw/fecalcanuga
+url: https://github.com/openwashdata/fecalcanuga
 template:
   bootstrap: 5
   includes:
@@ -10,7 +10,7 @@ home:
   links:
     - icon: github
       text: GitHub repository
-      href: https://github.com/kelseyshaw/fecalcanuga
+      href: https://github.com/openwashdata/fecalcanuga
   sidebar:
     structure: [links, citation, authors, dev, custom]
     components:

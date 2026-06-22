@@ -20,7 +20,7 @@
 26,data,household_survey.rda,rent_or_own,factor,Is the establishment where the containment is rented or owned by the head of household?
 27,data,household_survey.rda,containment,factor,"The type of containment (septic tank, pit latrine, treatment plant unit, etc.)"
 28,data,household_survey.rda,lining,factor,"The type of containment lining (fully lined, unlined, don't know)"
-29,data,household_survey.rda,lining_material,factor,"The material the lining is made of if it is lined (fiberglass, concreate, PVC, unlined, etc.)"
+29,data,household_survey.rda,lining_material,factor,"The material the lining is made of if it is lined (fiberglass, concrete, PVC, unlined, etc.)"
 30,data,household_survey.rda,change_in_liquid_level,factor,Is there a change in liquid level due to seasonal variation (Y/N)
 31,data,household_survey.rda,baffles,factor,Are there baffles in the containment (Y/N/I don't know)
 32,data,household_survey.rda,outflow,factor,Is there an outflow for the containment (Y/N/I don't know)
@@ -38,7 +38,6 @@
 44,data,household_survey.rda,laundry,numeric,Does the containment collect this type of wastewater (Yes = 1 | No = 0)
 45,data,household_survey.rda,kitchen,numeric,Does the containment collect this type of wastewater (Yes = 1 | No = 0)
 46,data,household_survey.rda,water_connection,factor,"What type of water connection does the establishment where sampling is occurring have (tap inside building, standpipe, other)?"
-47,data,household_survey.rda,where,factor,Does the establishment have this type of water connection (Yes = 1 | No = 0)
 48,data,household_survey.rda,tap_inside_building,numeric,Does the establishment have this type of water connection (Yes = 1 | No = 0)
 49,data,household_survey.rda,standpipe,numeric,Does the establishment have this type of water connection (Yes = 1 | No = 0)
 50,data,household_survey.rda,containment_age,factor,What is the age (in years) of the containment system?
@@ -49,7 +48,6 @@
 55,data,household_survey.rda,rainy_season,factor,Is it currently the rainy season? (Y/N)
 56,data,household_survey.rda,solid_waste,factor,"Does the containment contain solid waste (i.e., garbage) (Y/N)"
 57,data,household_survey.rda,type,factor,"If there is solid waste, what type is it? "
-58,data,household_survey.rda,notes,factor,Any additional important notings / observations 
 59,data,phys_chem_parameter.rda,sample_id,factor,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
 60,data,phys_chem_parameter.rda,location_id,factor,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
 61,data,phys_chem_parameter.rda,date,"c(""POSIXct"", ""POSIXt"")",date of sampling 

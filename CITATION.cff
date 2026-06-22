@@ -9,9 +9,9 @@ type: software
 license: CC-BY-4.0
 title: 'fecalcanuga: Demographic, Environmental, Technical and Physio-chemical Data
   on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda'
-version: 0.0.0.9000
-abstract: This data pacakge contains data representing 5 months of field work from
-  April - June 2023 (Canada) and January - February (Uganda) collecting household
+version: 0.1.0
+abstract: This data package contains data representing 5 months of field work from
+  April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household
   and commercial wastewater containment data and characterizing physical, chemical
   and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver
   island and the southern gulf islands in British Columbia, Canada and 19 sites in
@@ -39,7 +39,7 @@ authors:
   orcid: https://orcid.org/0009-0009-4546-7214
 repository-code: https://github.com/openwashdata/fecalcanuga
 url: https://github.com/openwashdata/fecalcanuga
-date-released: '2024-10-17'
+date-released: '2026-06-22'
 contact:
 - family-names: Shaw
   given-names: Kelsey
