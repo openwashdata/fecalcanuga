@@ -23,6 +23,7 @@ bibentry(bibtype = "Misc",
                            email = "mzhong@ethz.ch",
                            comment = c(ORCID = "0009-0009-4546-7214"))),
          year = "2026",
+         doi = "10.5281/zenodo.20795917",
          url = "https://github.com/openwashdata/fecalcanuga",
          abstract = "This data package contains data representing 5 months of field work from April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.",
          version = "0.1.0")

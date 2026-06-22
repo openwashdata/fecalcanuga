@@ -1,0 +1,36 @@
+# Authors and Citation
+
+## Authors
+
+- **Kelsey Shaw**. Author, maintainer.
+  [](https://orcid.org/0000-0001-7417-110X)
+
+- **Caetano Dorea**. Author. [](https://orcid.org/0000-0001-9367-0668)
+
+- **Linda Strande**. Author. [](https://orcid.org/0000-0003-4477-6268)
+
+- **Charles Niwagaba**. Author.
+  [](https://orcid.org/0000-0003-1494-1939)
+
+- **Mian Zhong**. Author. [](https://orcid.org/0009-0009-4546-7214)
+
+## Citation
+
+Source:
+[`inst/CITATION`](https://github.com/openwashdata/fecalcanuga/blob/HEAD/inst/CITATION)
+
+Shaw K, Dorea C, Strande L, Niwagaba C, Zhong M (2026). “fecalcanuga:
+Demographic, Environmental, Technical and Physio-chemical Data on Non
+Sewered Sanitation Containments in Rural Canada and Urban Uganda.”
+[doi:10.5281/zenodo.20795917](https://doi.org/10.5281/zenodo.20795917).
+<https://github.com/openwashdata/fecalcanuga>.
+
+    @Misc{shaw_etall:2026,
+      title = {fecalcanuga: Demographic, Environmental, Technical and Physio-chemical Data on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda},
+      author = {Kelsey Shaw and Caetano Dorea and Linda Strande and Charles Niwagaba and Mian Zhong},
+      year = {2026},
+      doi = {10.5281/zenodo.20795917},
+      url = {https://github.com/openwashdata/fecalcanuga},
+      abstract = {This data package contains data representing 5 months of field work from April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.},
+      version = {0.1.0},
+    }

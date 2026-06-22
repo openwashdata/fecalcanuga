@@ -11,3 +11,4 @@
 ^pkgdown$
 ^CITATION\.cff$
 ^\.github$
+^inst/CITATION\.bk.*$

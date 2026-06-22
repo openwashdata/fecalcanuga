@@ -1,7 +1,7 @@
-# --------------------------------------------
-# CITATION file created with {cffr} R package
+# ------------------------------------------------
+# CITATION.cff file created with {cffr} R package
 # See also: https://docs.ropensci.org/cffr/
-# --------------------------------------------
+# ------------------------------------------------
  
 cff-version: 1.2.0
 message: 'To cite package "fecalcanuga" in publications use:'
@@ -10,6 +10,7 @@ license: CC-BY-4.0
 title: 'fecalcanuga: Demographic, Environmental, Technical and Physio-chemical Data
   on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda'
 version: 0.1.0
+doi: 10.5281/zenodo.20795917
 abstract: This data package contains data representing 5 months of field work from
   April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household
   and commercial wastewater containment data and characterizing physical, chemical

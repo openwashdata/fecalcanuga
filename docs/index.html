@@ -7,12 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Demographic, Environmental, Technical and Physio-chemical Data on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda • fecalcanuga</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Demographic, Environmental, Technical and Physio-chemical Data on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda">
-<meta name="description" content="This data pacakge contains data representing 5 months of field work from April - June 2023 (Canada) and January - February (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.">
-<meta property="og:description" content="This data pacakge contains data representing 5 months of field work from April - June 2023 (Canada) and January - February (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.">
+<meta name="description" content="This data package contains data representing 5 months of field work from April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.">
+<meta property="og:description" content="This data package contains data representing 5 months of field work from April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.">
 <script defer data-domain="openwashdata.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
@@ -23,7 +23,7 @@
 
     <a class="navbar-brand me-2" href="index.html">fecalcanuga</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,12 +33,13 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="nav-link" href="news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/openwashdata/fecalcanuga/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="nav-link" href="https://github.com/openwashdata/fecalcanuga/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -58,7 +59,7 @@
 <p>You can install the development version of fecalcanuga from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"kelseyshaw/fecalcanuga"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/install-deprecated.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"openwashdata/fecalcanuga"</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Run the following code in console if you don't have the packages</span></span>
 <span><span class="co">## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))</span></span>
@@ -81,15 +82,15 @@
 <tbody>
 <tr>
 <td align="left">containment</td>
-<td align="left"><a href="https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/containment.csv">Download CSV</a></td>
+<td align="left"><a href="https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/containment.csv">Download CSV</a></td>
 </tr>
 <tr>
 <td align="left">household_survey</td>
-<td align="left"><a href="https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/household_survey.csv">Download CSV</a></td>
+<td align="left"><a href="https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/household_survey.csv">Download CSV</a></td>
 </tr>
 <tr>
 <td align="left">phys_chem_parameter</td>
-<td align="left"><a href="https://github.com/kelseyshaw/fecalcanuga/raw/main/inst/extdata/phys_chem_parameter.csv">Download CSV</a></td>
+<td align="left"><a href="https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/phys_chem_parameter.csv">Download CSV</a></td>
 </tr>
 </tbody>
 </table>
@@ -99,7 +100,7 @@
 </h2>
 <p>The package provides access to 3 datasets: <code>containment</code>, <code>household_survey</code>, and <code>phys_chem_parameter</code>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/openwashdata/fecalcanuga" class="external-link">fecalcanuga</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/openwashdata/fecalcanuga">fecalcanuga</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="containment">containment<a class="anchor" aria-label="anchor" href="#containment"></a>
 </h3>
@@ -109,7 +110,7 @@
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/as_raw_html.html" class="external-link">as_raw_html</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<div id="yepgxulogp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="lljdzespet" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
 
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
@@ -247,7 +248,7 @@ scum_depth
 </div>
 <p>For an overview of the variable names, see the following table.</p>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
-<table class="table table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table table table-striped" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 variable_name
@@ -377,13 +378,13 @@ the depth of the top scum layer in centimeters
 <div class="section level3">
 <h3 id="household_survey">household_survey<a class="anchor" aria-label="anchor" href="#household_survey"></a>
 </h3>
-<p>The dataset <code>household_survey</code> contains data about the collected household / institutional survey data for each location where a non-sewered sanitation containmenet was sampled. This includes demographic infromation, operational and maintenance information and some technical and environmental parameters. It has 41 observations and 39 variables</p>
+<p>The dataset <code>household_survey</code> contains data about the collected household / institutional survey data for each location where a non-sewered sanitation containment was sampled. This includes demographic infromation, operational and maintenance information and some technical and environmental parameters. It has 41 observations and 39 variables</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">household_survey</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/as_raw_html.html" class="external-link">as_raw_html</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<div id="mbgxbsdehe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="raujurohay" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
 
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
@@ -869,7 +870,7 @@ NA
 </div>
 <p>For an overview of the variable names, see the following table.</p>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
-<table class="table table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table table table-striped" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 variable_name
@@ -1011,7 +1012,7 @@ lining_material
 factor
 </td>
 <td style="text-align:left;">
-The material the lining is made of if it is lined (fiberglass, concreate, PVC, unlined, etc.)
+The material the lining is made of if it is lined (fiberglass, concrete, PVC, unlined, etc.)
 </td>
 </tr>
 <tr>
@@ -1088,7 +1089,7 @@ paper
 numeric
 </td>
 <td style="text-align:left;">
-Is paper used for anal cleansing (Yes = 1 | No = 0)
+Is paper used for anal cleansing (Yes = 1 &amp;#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -1099,7 +1100,7 @@ water
 numeric
 </td>
 <td style="text-align:left;">
-Is water used for anal cleansing (Yes = 1 | No = 0)
+Is water used for anal cleansing (Yes = 1 &amp;#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -1154,7 +1155,7 @@ toilet
 numeric
 </td>
 <td style="text-align:left;">
-Does the containment collect this type of wastewater (Yes = 1 | No = 0)
+Does the containment collect this type of wastewater (Yes = 1 &amp;#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -1165,7 +1166,7 @@ bathing
 numeric
 </td>
 <td style="text-align:left;">
-Does the containment collect this type of wastewater (Yes = 1 | No = 0)
+Does the containment collect this type of wastewater (Yes = 1 &amp;#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -1176,7 +1177,7 @@ laundry
 numeric
 </td>
 <td style="text-align:left;">
-Does the containment collect this type of wastewater (Yes = 1 | No = 0)
+Does the containment collect this type of wastewater (Yes = 1 &amp;#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -1187,7 +1188,7 @@ kitchen
 numeric
 </td>
 <td style="text-align:left;">
-Does the containment collect this type of wastewater (Yes = 1 | No = 0)
+Does the containment collect this type of wastewater (Yes = 1 &amp;#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -1203,24 +1204,13 @@ What type of water connection does the establishment where sampling is occurring
 </tr>
 <tr>
 <td style="text-align:left;">
-where
-</td>
-<td style="text-align:left;">
-factor
-</td>
-<td style="text-align:left;">
-Does the establishment have this type of water connection (Yes = 1 | No = 0)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 tap_inside_building
 </td>
 <td style="text-align:left;">
 numeric
 </td>
 <td style="text-align:left;">
-Does the establishment have this type of water connection (Yes = 1 | No = 0)
+Does the establishment have this type of water connection (Yes = 1 &amp;#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -1231,7 +1221,7 @@ standpipe
 numeric
 </td>
 <td style="text-align:left;">
-Does the establishment have this type of water connection (Yes = 1 | No = 0)
+Does the establishment have this type of water connection (Yes = 1 &amp;#124; No = 0)
 </td>
 </tr>
 <tr>
@@ -1322,17 +1312,6 @@ factor
 If there is solid waste, what type is it?
 </td>
 </tr>
-<tr>
-<td style="text-align:left;">
-notes
-</td>
-<td style="text-align:left;">
-factor
-</td>
-<td style="text-align:left;">
-Any additional important notings / observations
-</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -1346,7 +1325,7 @@ Any additional important notings / observations
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/as_raw_html.html" class="external-link">as_raw_html</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<div id="uhubejxmhc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ecqxmloevr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
 
 <table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
@@ -1712,7 +1691,7 @@ B
 </div>
 <p>For an overview of the variable names, see the following table.</p>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
-<table class="table table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table table table-striped" style="margin-left: auto; margin-right: auto;">
 <thead><tr>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 variable_name
@@ -2054,7 +2033,7 @@ VSS/TSS (ratio)
 </h2>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Plot of Volatile Suspended Solids (VSS) versus Chemical Oxygen Demand (COD) for all samples. This plot demonstrates how changes in organic loads (COD) can influence biomass (VSS)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/openwashdata/fecalcanuga" class="external-link">fecalcanuga</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/openwashdata/fecalcanuga">fecalcanuga</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="co"># Filter out rows with NA values in COD or vss</span></span>
 <span><span class="va">filtered_data</span> <span class="op">&lt;-</span> <span class="va">phys_chem_parameter</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -2068,12 +2047,12 @@ VSS/TSS (ratio)
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"VSS vs COD"</span>,</span>
 <span>       x <span class="op">=</span> <span class="st">"VSS (mg/L)"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"COD (mg/L)"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-11-1.png" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/README-unnamed-chunk-11-1.png" alt="" width="100%" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level2">
 <h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
 </h2>
-<p>Data are available as <a href="https://github.com/openwashdata/fecalcanuga/blob/main/LICENSE.md" class="external-link">CC-BY</a>.</p>
+<p>Data are available as <a href="https://github.com/openwashdata/fecalcanuga/blob/main/LICENSE.md">CC-BY</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
@@ -2083,29 +2062,32 @@ VSS/TSS (ratio)
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"fecalcanuga"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; To cite package 'fecalcanuga' in publications use:</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;   Shaw K, Dorea C, Strande L, Niwagaba C, Zhong M (2024). "fecalcanuga:</span></span>
+<span><span class="co">#&gt;   Shaw K, Dorea C, Strande L, Niwagaba C, Zhong M (2026). "fecalcanuga:</span></span>
 <span><span class="co">#&gt;   Demographic, Environmental, Technical and Physio-chemical Data on Non</span></span>
 <span><span class="co">#&gt;   Sewered Sanitation Containments in Rural Canada and Urban Uganda."</span></span>
+<span><span class="co">#&gt;   doi:10.5281/zenodo.20795917</span></span>
+<span><span class="co">#&gt;   &lt;https://doi.org/10.5281/zenodo.20795917&gt;.</span></span>
 <span><span class="co">#&gt;   &lt;https://github.com/openwashdata/fecalcanuga&gt;.</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; A BibTeX entry for LaTeX users is</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;   @Misc{shaw_etall:2024,</span></span>
+<span><span class="co">#&gt;   @Misc{shaw_etall:2026,</span></span>
 <span><span class="co">#&gt;     title = {fecalcanuga: Demographic, Environmental, Technical and Physio-chemical Data on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda},</span></span>
 <span><span class="co">#&gt;     author = {Kelsey Shaw and Caetano Dorea and Linda Strande and Charles Niwagaba and Mian Zhong},</span></span>
-<span><span class="co">#&gt;     year = {2024},</span></span>
+<span><span class="co">#&gt;     year = {2026},</span></span>
+<span><span class="co">#&gt;     doi = {10.5281/zenodo.20795917},</span></span>
 <span><span class="co">#&gt;     url = {https://github.com/openwashdata/fecalcanuga},</span></span>
-<span><span class="co">#&gt;     abstract = {This data pacakge contains data representing 5 months of field work from April - June 2023 (Canada) and January - February (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.},</span></span>
-<span><span class="co">#&gt;     version = {0.0.0.9000},</span></span>
+<span><span class="co">#&gt;     abstract = {This data package contains data representing 5 months of field work from April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.},</span></span>
+<span><span class="co">#&gt;     version = {0.1.0},</span></span>
 <span><span class="co">#&gt;   }</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/openwashdata/fecalcanuga/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/openwashdata/fecalcanuga/issues" class="external-link">Report a bug</a></li>
-<li><a href="https://github.com/kelseyshaw/fecalcanuga">GitHub repository</a></li>
+<li><a href="https://github.com/openwashdata/fecalcanuga/">Browse source code</a></li>
+<li><a href="https://github.com/openwashdata/fecalcanuga/issues">Report a bug</a></li>
+<li><a href="https://github.com/openwashdata/fecalcanuga">GitHub repository</a></li>
 </ul>
 </div>
 
@@ -2133,6 +2115,7 @@ VSS/TSS (ratio)
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://creativecommons.org/licenses/by/4.0/" class="external-link"><img src="https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg" alt="License: CC BY 4.0"></a></li>
+<li><a href="https://zenodo.org/doi/10.5281/zenodo.20795917" class="external-link"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20795917.svg" alt="DOI"></a></li>
 </ul>
 </div>
 
@@ -2152,7 +2135,7 @@ VSS/TSS (ratio)
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
