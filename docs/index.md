@@ -1,0 +1,268 @@
+# fecalcanuga
+
+The goal of `fecalcanuga` is to provide data representing 5 months of
+field work from April - June 2023 in Southern Coastal BC (Canada) and in
+Kampala (Uganda) from January - February 2024 where household and
+commercial non-sewered containment data was collected, characterizing
+demographic, technical, environmental, physical, chemical and biological
+data for 22 non-sewered sanitation sites in Southern Coastal British
+Columbia, Canada and 19 sites in Kampala, Uganda.
+
+## Installation
+
+You can install the development version of fecalcanuga from
+[GitHub](https://github.com/) with:
+
+``` r
+
+# install.packages("devtools")
+devtools::install_github("openwashdata/fecalcanuga")
+```
+
+``` r
+
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV file
+from the table below.
+
+| dataset | CSV |
+|:---|:---|
+| containment | [Download CSV](https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/containment.csv) |
+| household_survey | [Download CSV](https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/household_survey.csv) |
+| phys_chem_parameter | [Download CSV](https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/phys_chem_parameter.csv) |
+
+## Data
+
+The package provides access to 3 datasets: `containment`,
+`household_survey`, and `phys_chem_parameter`.
+
+``` r
+
+library(fecalcanuga)
+```
+
+### containment
+
+The dataset `containment` contains data about the technical data
+(containment size, volume, fecal sludge depth, etc.) for each
+non-sewered sanitation system containment that was sampled as a part of
+this field work. It has 41 observations and 10 variables
+
+``` r
+
+containment |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+| sample_id | location_id | date | area | sludge_depth | containment_depth | containment_volume | fs_volume | accumulation_rate | scum_depth |
+|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 01-Pender-06042023 | 1a | 2023-04-06 | 1.00 | 0.40 | 1.70 | 1.6953 | 1.6914 | 169.1400 | 0 |
+| 02-Pender-06042023 | 1b | 2023-04-06 | 1.64 | 0.53 | 2.36 | 3.8600 | 3.0000 | 1000.0000 | 8 |
+| 03-Saanich-12042023 | 2a | 2023-04-12 | 1.57 | 0.89 | 2.70 | 4.2476 | 4.2337 | 705.6167 | 0 |
+
+For an overview of the variable names, see the following table.
+
+| variable_name | variable_type | description |
+|:---|:---|:---|
+| sample_id | factor | unique identifier for each sampling location in the format \##-Location-ddmmyyyy |
+| location_id | factor | unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day |
+| date | c(“POSIXct”, “POSIXt”) | date of sampling |
+| area | numeric | surface area of liquid surface in containment m^2 |
+| sludge_depth | numeric | depth in meters, of where from the top of the sludge the sample was taken |
+| containment_depth | numeric | depth, in meters, from the top of the containment to the bottom of the containment |
+| containment_volume | numeric | total volume of the containment in m^3 |
+| fs_volume | numeric | total volume of the sludge in containment in m^3 |
+| accumulation_rate | numeric | the accumulation rate in litres/capita -year (based on total volume and number of users) |
+| scum_depth | numeric | the depth of the top scum layer in centimeters |
+
+### household_survey
+
+The dataset `household_survey` contains data about the collected
+household / institutional survey data for each location where a
+non-sewered sanitation containment was sampled. This includes
+demographic infromation, operational and maintenance information and
+some technical and environmental parameters. It has 41 observations and
+39 variables
+
+``` r
+
+household_survey |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+| sample_id | location_id | date | local_area_name | establishment_type | users | last_emptied | shared_toilet | rent_or_own | containment | lining | lining_material | change_in_liquid_level | baffles | outflow | outflow_location | toilet_type | anal_cleansing_material | paper | water | additives | frequency | chemicals | wastewater_type | toilet | bathing | laundry | kitchen | water_connection | tap_inside_building | standpipe | containment_age | containment_constructed | containment_volume | fully_emptied | emptying_interval | rainy_season | solid_waste | type |
+|:---|:---|---:|:--:|:--:|---:|---:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|---:|---:|:--:|:--:|---:|:--:|---:|:--:|:--:|:--:|
+| 01-Pender-06042023 | 1a | 2023-04-06 | Pender Island | Household | 2 | 5 | FALSE | Own | Septic tank | Fully lined (watertight) | Fiberglass | FALSE | TRUE | TRUE | Leech field | Cistern flush | Paper | TRUE | FALSE | FALSE | NA | Bleach, CLR | Toilet Bathing Laundry Kitchen | TRUE | TRUE | TRUE | TRUE | TRUE | 1 | 0 | More than 10 years old | Technician/Mason | NA | TRUE | 15 | FALSE | FALSE | NA |
+| 02-Pender-06042023 | 1b | 2023-04-06 | Pender Island | Household | 3 | 1 | FALSE | Own | Septic tank | Fully lined (watertight) | Fiberglass | FALSE | TRUE | TRUE | Leech field | Cistern flush | Paper | TRUE | FALSE | FALSE | NA | Bleach | Toilet Bathing Laundry Kitchen | TRUE | TRUE | TRUE | TRUE | TRUE | 1 | 0 | More than 10 years old | Technician/Mason | NA | TRUE | NA | FALSE | FALSE | NA |
+| 03-Saanich-12042023 | 2a | 2023-04-12 | Saanich | Household | 2 | 3 | TRUE | Own | Septic tank | Fully lined (watertight) | Fiberglass | FALSE | TRUE | TRUE | Leech field | Cistern flush | Paper | TRUE | FALSE | FALSE | NA | NA | Toilet Bathing Laundry Kitchen | TRUE | TRUE | TRUE | TRUE | TRUE | 1 | 0 | More than 10 years old | Technician/Mason | NA | TRUE | 5 | FALSE | FALSE | NA |
+
+For an overview of the variable names, see the following table.
+
+| variable_name | variable_type | description |
+|:---|:---|:---|
+| sample_id | factor | unique identifier for each sampling location in the format \##-Location-ddmmyyyy |
+| location_id | factor | unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day |
+| date | c(“POSIXct”, “POSIXt”) | date of sampling |
+| local_area_name | factor | community / area name that locals commonly use where samples were taken |
+| establishment_type | factor | type of establishment where sampling occurred (household, commercial, school, office building, other) |
+| users | numeric | average number of users for the sanitation system that was sampled |
+| last_emptied | numeric | in years how long ago from sampling date the containment was last emptied |
+| shared_toilet | factor | Is the toilet(s) connected to the sanitation containment shared or not (Yes/No) |
+| rent_or_own | factor | Is the establishment where the containment is rented or owned by the head of household? |
+| containment | factor | The type of containment (septic tank, pit latrine, treatment plant unit, etc.) |
+| lining | factor | The type of containment lining (fully lined, unlined, don’t know) |
+| lining_material | factor | The material the lining is made of if it is lined (fiberglass, concrete, PVC, unlined, etc.) |
+| change_in_liquid_level | factor | Is there a change in liquid level due to seasonal variation (Y/N) |
+| baffles | factor | Are there baffles in the containment (Y/N/I don’t know) |
+| outflow | factor | Is there an outflow for the containment (Y/N/I don’t know) |
+| outflow_location | factor | If there is an outflow, where is it located (i.e., leech field) |
+| toilet_type | factor | What is the type of toilet connected to the sanitation system (cistern flush, pour-flush, etc.) |
+| anal_cleansing_material | factor | What type of material is used for anal cleansing (water, paper, both) |
+| paper | numeric | Is paper used for anal cleansing (Yes = 1 \&#124; No = 0) |
+| water | numeric | Is water used for anal cleansing (Yes = 1 \&#124; No = 0) |
+| additives | factor | Are there additives added to the containment (Y/N/I don’t know) |
+| frequency | factor | If additives are added, in what frequency? |
+| chemicals | factor | What chemicals are added to the sanitation system? |
+| wastewater_type | factor | What are the types of wastewater that the containment collects (toilet, kitchen, laundry, bathing) |
+| toilet | numeric | Does the containment collect this type of wastewater (Yes = 1 \&#124; No = 0) |
+| bathing | numeric | Does the containment collect this type of wastewater (Yes = 1 \&#124; No = 0) |
+| laundry | numeric | Does the containment collect this type of wastewater (Yes = 1 \&#124; No = 0) |
+| kitchen | numeric | Does the containment collect this type of wastewater (Yes = 1 \&#124; No = 0) |
+| water_connection | factor | What type of water connection does the establishment where sampling is occurring have (tap inside building, standpipe, other)? |
+| tap_inside_building | numeric | Does the establishment have this type of water connection (Yes = 1 \&#124; No = 0) |
+| standpipe | numeric | Does the establishment have this type of water connection (Yes = 1 \&#124; No = 0) |
+| containment_age | factor | What is the age (in years) of the containment system? |
+| containment_constructed | factor | Who constructed the containment system (Technician, professional engineering, myself, don’t know)? |
+| containment_volume | numeric | What (in m^3) is the total volume of the containment? |
+| fully_emptied | factor | When the system was last emptied was it emptied fully? (Y/N/I don’t know) |
+| emptying_interval | numeric | What is the average / typical emptying interval (in years) of the containment? |
+| rainy_season | factor | Is it currently the rainy season? (Y/N) |
+| solid_waste | factor | Does the containment contain solid waste (i.e., garbage) (Y/N) |
+| type | factor | If there is solid waste, what type is it? |
+
+### phys_chem_parameter
+
+The dataset `phys_chem_parameter` contains data about the measured in
+situ and analyzed in laboratory physical, chemical and biological
+parameters pertaining to each containment sampled as well as at
+different veritcal locations in each containment (i.e., Top of
+containment, middle and bottom). It has 119 observations and 29
+variables
+
+``` r
+
+phys_chem_parameter |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+| sample_id | location_id | date | depth_id | sludge_depth | temperature | DO | pH | ORP | EC | COD | soluble_COD | sulphide | total_nitrogen | nitrite | nitrate | ammonia | TKN | ortho_phosphorous | total_phosphorous | BOD | TOC | ts | vs | vs_percent | sand_content | tss | vss | vss_tss |
+|:--:|:--:|---:|:--:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 01-Pender-06042023 | 1a | 2023-04-06 | T | 0.00 | 11.500 | 5.4 | 7.41 | 111 | 254 | 584 | 557.0000 | 0.10 | 15.5 | 0.015 | 5 | 10.90 | 10.485 | 6 | 6.00 | 13.6 | 38.7 | 0.2086738 | 0.1088530 | 51.76165 | 0.009784946 | 0.0516129 | 0.04516129 | 0.8750000 |
+| 01-Pender-06042023 | 1a | 2023-04-06 | M | 0.65 | 11.494 | 4.0 | 6.21 | -80 | 400 | 585 | 555.6667 | 0.10 | 16.3 | 0.015 | 5 | 11.00 | 11.285 | 6 | 6.00 | 11.9 | 32.4 | 0.2200000 | 0.1400000 | 63.63636 | 0.006666667 | 0.0500000 | 0.04333333 | 0.8666667 |
+| 01-Pender-06042023 | 1a | 2023-04-06 | B | 1.31 | 10.700 | 1.0 | 6.89 | -75 | 254 | 625 | 572.0000 | 0.25 | 26.4 | 0.015 | 5 | 8.26 | 21.385 | 6 | 6.26 | 66.1 | 64.9 | 0.6633333 | 0.4133333 | 62.31156 | 0.140000000 | 0.4867742 | 0.31974910 | 0.6568736 |
+
+For an overview of the variable names, see the following table.
+
+| variable_name | variable_type | description |
+|:---|:---|:---|
+| sample_id | factor | unique identifier for each sampling location in the format \##-Location-ddmmyyyy |
+| location_id | factor | unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day |
+| date | c(“POSIXct”, “POSIXt”) | date of sampling |
+| depth_id | factor | unique identifier for each sample indicating the location in the containment (T = top, M = middle, B = bottom) |
+| sludge_depth | numeric | depth in meters, of where from the top of the sludge the sample was taken |
+| temperature | numeric | Temperature of the sludge at the insitu sampling location (in degrees Celsius) |
+| DO | numeric | dissolved oxygen concentration in mg/L at the insitu sampling location |
+| pH | numeric | pH value at the insitu sampling location |
+| ORP | numeric | oxidation reduction potential, measured in millivolts, at the insitu sampling locations |
+| EC | numeric | electrical conductivity, measured in microSiemens, at the insitu sampling locations |
+| COD | numeric | Chemical oxygen demand, mg/L |
+| soluble_COD | numeric | Soluble chemical oxygen demand, mg/L |
+| sulphide | numeric | Sulphide, mg/L |
+| total_nitrogen | numeric | Total Nitrogen, mg/L |
+| nitrite | numeric | Nitrite, mg/L |
+| nitrate | numeric | Nitrate, mg/L |
+| ammonia | numeric | Ammonia, mg/L |
+| TKN | numeric | Total Kjeldahl Nitrogen, mg/L |
+| ortho_phosphorous | numeric | Ortho Phosphorous, mg/L |
+| total_phosphorous | numeric | Total Phosphorous, mg/L |
+| BOD | numeric | Biochemical oxygen demand, mg/L |
+| TOC | numeric | Total organic carbon, mg/L |
+| ts | numeric | Total solids, g/L |
+| vs | numeric | Volatile Solids, g/L |
+| vs_percent | numeric | Volatile Solids, % total solids |
+| sand_content | numeric | Sand content, g/L |
+| tss | numeric | Total suspended solids, g/L |
+| vss | numeric | Volatile suspended solids, g/L |
+| vss_tss | numeric | VSS/TSS (ratio) |
+
+## Example
+
+``` r
+
+# Plot of Volatile Suspended Solids (VSS) versus Chemical Oxygen Demand (COD) for all samples. This plot demonstrates how changes in organic loads (COD) can influence biomass (VSS)
+library(fecalcanuga)
+library(ggplot2)
+# Filter out rows with NA values in COD or vss
+filtered_data <- phys_chem_parameter %>%
+  filter(!is.na(COD) & !is.na(vss))
+
+# Plot VSS vs COD
+ggplot(filtered_data, aes(x = vss, y = COD)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  theme_minimal() +
+  labs(title = "VSS vs COD",
+       x = "VSS (mg/L)",
+       y = "COD (mg/L)")
+```
+
+![](reference/figures/README-unnamed-chunk-11-1.png)
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/fecalcanuga/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+``` r
+
+citation("fecalcanuga")
+#> To cite package 'fecalcanuga' in publications use:
+#> 
+#>   Shaw K, Dorea C, Strande L, Niwagaba C, Zhong M (2026). "fecalcanuga:
+#>   Demographic, Environmental, Technical and Physio-chemical Data on Non
+#>   Sewered Sanitation Containments in Rural Canada and Urban Uganda."
+#>   doi:10.5281/zenodo.20795917
+#>   <https://doi.org/10.5281/zenodo.20795917>.
+#>   <https://github.com/openwashdata/fecalcanuga>.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Misc{shaw_etall:2026,
+#>     title = {fecalcanuga: Demographic, Environmental, Technical and Physio-chemical Data on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda},
+#>     author = {Kelsey Shaw and Caetano Dorea and Linda Strande and Charles Niwagaba and Mian Zhong},
+#>     year = {2026},
+#>     doi = {10.5281/zenodo.20795917},
+#>     url = {https://github.com/openwashdata/fecalcanuga},
+#>     abstract = {This data package contains data representing 5 months of field work from April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.},
+#>     version = {0.1.0},
+#>   }
+```
