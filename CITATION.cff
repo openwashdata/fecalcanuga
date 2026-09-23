@@ -5,12 +5,11 @@
  
 cff-version: 1.2.0
 message: 'To cite package "fecalcanuga" in publications use:'
-type: software
+type: dataset
 license: CC-BY-4.0
-title: 'fecalcanuga: Demographic, Environmental, Technical and Physio-chemical Data
-  on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda'
+title: 'fecalcanuga: Non-Sewered Sanitation Containments, Canada and Uganda 2023-2024'
 version: 0.1.0
-doi: 10.5281/zenodo.20795917
+doi: 10.5281/zenodo.20795916
 abstract: This data package contains data representing 5 months of field work from
   April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household
   and commercial wastewater containment data and characterizing physical, chemical
@@ -46,4 +45,13 @@ contact:
   given-names: Kelsey
   email: kelseyshaw@uvic.ca
   orcid: https://orcid.org/0000-0001-7417-110X
+keywords:
+- open data
+- washdata
+- non-sewered sanitation
+- fecal sludge
+- septic tanks
+- greenhouse gas emissions
+- Canada
+- Uganda
 
