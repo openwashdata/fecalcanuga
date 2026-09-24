@@ -7,7 +7,8 @@
 
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20795917.svg)](https://zenodo.org/doi/10.5281/zenodo.20795917)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20795916.svg)](https://zenodo.org/doi/10.5281/zenodo.20795916)
+[![R-CMD-check](https://github.com/openwashdata/fecalcanuga/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/fecalcanuga/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of `fecalcanuga` is to provide data representing 5 months of
@@ -45,6 +46,7 @@ from the table below.
 | dataset | CSV |
 |:---|:---|
 | containment | [Download CSV](https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/containment.csv) |
+| ghg | [Download CSV](https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/ghg.csv) |
 | household_survey | [Download CSV](https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/household_survey.csv) |
 | phys_chem_parameter | [Download CSV](https://github.com/openwashdata/fecalcanuga/raw/main/inst/extdata/phys_chem_parameter.csv) |
 
@@ -71,7 +73,7 @@ containment |>
   gt::as_raw_html()
 ```
 
-<div id="lljdzespet" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="veapsmknyd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -370,7 +372,7 @@ household_survey |>
   gt::as_raw_html()
 ```
 
-<div id="raujurohay" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="quhqjsulml" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -1351,7 +1353,7 @@ phys_chem_parameter |>
   gt::as_raw_html()
 ```
 
-<div id="ecqxmloevr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ogkagzlgnk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -2109,21 +2111,21 @@ citation("fecalcanuga")
 #> To cite package 'fecalcanuga' in publications use:
 #> 
 #>   Shaw K, Dorea C, Strande L, Niwagaba C, Zhong M (2026). "fecalcanuga:
-#>   Demographic, Environmental, Technical and Physio-chemical Data on Non
-#>   Sewered Sanitation Containments in Rural Canada and Urban Uganda."
-#>   doi:10.5281/zenodo.20795917
-#>   <https://doi.org/10.5281/zenodo.20795917>.
+#>   Non-Sewered Sanitation Containments, Canada and Uganda 2023-2024."
+#>   doi:10.5281/zenodo.20795916
+#>   <https://doi.org/10.5281/zenodo.20795916>.
 #>   <https://github.com/openwashdata/fecalcanuga>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Misc{shaw_etall:2026,
-#>     title = {fecalcanuga: Demographic, Environmental, Technical and Physio-chemical Data on Non Sewered Sanitation Containments in Rural Canada and Urban Uganda},
+#>     title = {fecalcanuga: Non-Sewered Sanitation Containments, Canada and Uganda 2023-2024},
 #>     author = {Kelsey Shaw and Caetano Dorea and Linda Strande and Charles Niwagaba and Mian Zhong},
 #>     year = {2026},
-#>     doi = {10.5281/zenodo.20795917},
+#>     doi = {10.5281/zenodo.20795916},
 #>     url = {https://github.com/openwashdata/fecalcanuga},
 #>     abstract = {This data package contains data representing 5 months of field work from April - June 2023 (Canada) and January - February 2024 (Uganda) collecting household and commercial wastewater containment data and characterizing physical, chemical and greenhouse gas data for 22 non-sewered sanitation sites on southern Vancouver island and the southern gulf islands in British Columbia, Canada and 19 sites in Kampala, Uganda.},
+#>     keywords = {open data,washdata,non-sewered sanitation,fecal sludge,septic tanks,greenhouse gas emissions,Canada,Uganda},
 #>     version = {0.1.0},
 #>   }
 ```

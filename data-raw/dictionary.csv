@@ -9,6 +9,13 @@
 8,data,containment.rda,fs_volume,numeric,total volume of the sludge in containment in m^3
 9,data,containment.rda,accumulation_rate,numeric,the accumulation rate in litres/capita -year (based on total volume and number of users)
 10,data,containment.rda,scum_depth,numeric,the depth of the top scum layer in centimeters
+11,data,ghg.rda,sample_id,factor,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
+12,data,ghg.rda,location_id,factor,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
+13,data,ghg.rda,date,"c(""POSIXct"", ""POSIXt"")",date of sampling
+14,data,ghg.rda,users,numeric,average number of users for the sanitation system that was sampled
+15,data,ghg.rda,flux_ch4,numeric,methane flux in grams/capita-day - based on number of users
+16,data,ghg.rda,flux_co2,numeric,carbon dioxide flux in grams/capita-day - based on number of users
+17,data,ghg.rda,flux_n2o,numeric,nitrous oxide flux in grams/capita-day - based on number of users
 18,data,household_survey.rda,sample_id,factor,unique identifier for each sampling location in the format ##-Location-ddmmyyyy
 19,data,household_survey.rda,location_id,factor,unique location identifier for each sampling day in the format of (#)-day of sampling (a) - location in that day
 20,data,household_survey.rda,date,"c(""POSIXct"", ""POSIXt"")",date of sampling 
