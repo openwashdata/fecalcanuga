@@ -1,5 +1,7 @@
 # fecalcanuga
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 The goal of `fecalcanuga` is to provide data representing 5 months of
 field work from April - June 2023 in Southern Coastal BC (Canada) and in
 Kampala (Uganda) from January - February 2024 where household and
