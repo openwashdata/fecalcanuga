@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# fecalcanuga
+# fecalcanuga <a href="https://openwashdata.org"><img src="man/figures/logo.png" align="right" width="120" alt="openwashdata" /></a>
 
 <!-- badges: start -->
 
@@ -10,8 +10,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20795916.svg)](https://zenodo.org/doi/10.5281/zenodo.20795916)
 [![R-CMD-check](https://github.com/openwashdata/fecalcanuga/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/fecalcanuga/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
-
-A data package published by [openwashdata](https://openwashdata.org).
 
 The goal of `fecalcanuga` is to provide data representing 5 months of
 field work from April - June 2023 in Southern Coastal BC (Canada) and in
@@ -2105,6 +2103,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/fecalcanuga/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite this package using:
 
